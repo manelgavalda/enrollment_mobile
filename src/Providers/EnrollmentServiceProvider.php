@@ -4,7 +4,11 @@ namespace Scool\Enrollment\Providers;
 
     use Illuminate\Support\ServiceProvider;
 
-class EnrollmentServiceProvider extends ServiceProvider {
+    /**
+     * Class EnrollmentServiceProvider
+     * @package Scool\Enrollment\Providers
+     */
+    class EnrollmentServiceProvider extends ServiceProvider {
 
     public function register()
     {

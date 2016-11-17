@@ -3,6 +3,9 @@
 use Illuminate\Database\Seeder;
 use Scool\Enrollment\Database\Seeds;
 
+/**
+ * Class EnrollmentSeeder
+ */
 class EnrollmentSeeder extends Seeder
 {
     /**

@@ -13,6 +13,6 @@
         }
     ],
     "autoload": {
-        "psr-4": {"Scool\\Enrollment_mobile\\": "src"}
+        "psr-4": {"Scool\\Enrollment\\": "src"}
     }
 }
