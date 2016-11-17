@@ -28,8 +28,8 @@ namespace Scool\Enrollment\Providers;
 
     public function publishFactories(){
         $this->publishes(
-          [__DIR__.'/../../database/StudyFactory.php' =>
-          database_path().'/factories/StudyFactory.php'],
+          [__DIR__.'/../../database/Enrollment.php' =>
+          database_path().'/factories/Enrollment.php'],
             "scool_enrollment"
         );
     }
