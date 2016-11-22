@@ -1,6 +1,6 @@
 <?php
 
-namespace Scool\Enrollment\Providers;
+namespace Scool\EnrollmentMobile\Providers;
 
     use Illuminate\Support\ServiceProvider;
 
@@ -41,7 +41,7 @@ namespace Scool\Enrollment\Providers;
     {
         $this->publishes(
             SCOOL_ENROLLMENT_MOBILE_PATH.
-            'tests/EnrollmentMobileTest.php',
+            '/tests/EnrollmentMobileTest.php',
             'tests/EnrollmentMobileTest.php'
         );
     }
