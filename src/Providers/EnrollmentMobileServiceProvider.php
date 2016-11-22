@@ -39,10 +39,10 @@ namespace Scool\Enrollment\Providers;
 
     public function publishTests()
     {
-        $this->publishes([
+        $this->publishes(
             SCOOL_ENROLLMENT_MOBILE_PATH.
             'tests/EnrollmentMobileTest.php',
             'tests/EnrollmentMobileTest.php'
-        ]);
+        );
     }
 }
