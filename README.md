@@ -23,6 +23,13 @@ Add to file **config/app.php** the EnrollmentSerivceProvider.php.
 Add to file ServiceProvider.
 Scool\Curriculum\Providers\EnrollmentServiceProvider::class,
 ```
+
+Add publish files with:
+
+```bash
+php artisan vendor:publish --tag=scool_enrollment_mobile
+```
+
 ## Usage
 
 ``` php

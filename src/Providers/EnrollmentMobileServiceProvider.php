@@ -8,7 +8,7 @@ namespace Scool\Enrollment\Providers;
      * Class EnrollmentServiceProvider
      * @package Scool\Enrollment\Providers
      */
-    class EnrollmentServiceProvider extends ServiceProvider {
+    class EnrollmentMobileServiceProvider extends ServiceProvider {
 
     public function register()
     {
