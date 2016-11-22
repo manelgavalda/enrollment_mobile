@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Scool\\Enrollment\\": "src"
+            "Scool\\EnrollmentMobile\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Scool\\Enrollment\\": "tests"
+            "Scool\\EnrollmentMobile\\": "tests"
         }
     },
     "scripts": {

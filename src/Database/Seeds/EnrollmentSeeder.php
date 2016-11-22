@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Scool\Enrollment\Database\Seeds;
+use Scool\EnrollmentMobile\Database\Seeds;
 
 /**
  * Class EnrollmentSeeder
