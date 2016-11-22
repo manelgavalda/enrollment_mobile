@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Class MisTestos
+ * Class Enrollment
  * @package Scool\Curriculum
  */
-class MisTestosTest extends PHPUnit_Framework_TestCase
+class Enrollment extends PHPUnit_Framework_TestCase
 {
     /**
      * Mi prova tonta
