@@ -12,8 +12,8 @@ namespace Scool\Enrollment\Providers;
 
     public function register()
     {
-         if(!defined('SCOOL_ENROLLMENTMOBILE_PATH')){
-             define('SCOOL_ENROLLMENTMOBILE_PATH', realpath(__DIR__. '/../../'));
+         if(!defined('SCOOL_ENROLLMENT_MOBILE_PATH')){
+             define('SCOOL_ENROLLMENT_MOBILE_PATH', realpath(__DIR__. '/../../'));
          }
     }
 
