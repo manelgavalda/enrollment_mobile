@@ -18,6 +18,11 @@ Via Composer
 $ composer require scool/enrollment_mobile
 ```
 
+Add to file **config/app.php** the EnrollmentSerivceProvider.php.
+```
+Add to file ServiceProvider.
+Scool\Curriculum\Providers\EnrollmentServiceProvider::class,
+```
 ## Usage
 
 ``` php
