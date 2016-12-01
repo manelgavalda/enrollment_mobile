@@ -6,7 +6,7 @@ use Scool\EnrollmentMobile\Database\Seeds;
 /**
  * Class EnrollmentSeeder
  */
-class EnrollmentSeeder extends Seeder
+class EnrollmentMobileSeeder extends Seeder
 {
     /**
      * Run the database Seeds.
