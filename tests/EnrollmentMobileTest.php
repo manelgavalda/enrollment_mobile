@@ -4,7 +4,7 @@
  * Class Enrollment
  * @package Scool\Curriculum
  */
-class EnrollmentMobile extends PHPUnit_Framework_TestCase
+class EnrollmentMobileTest extends PHPUnit_Framework_TestCase
 {
     /**
      * Mi prova tonta
