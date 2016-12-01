@@ -12,16 +12,18 @@ PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
 
-Via Composer
+Via Composer:
 
 ``` bash
 $ composer require scool/enrollment_mobile
 ```
 
-Add to file **config/app.php** the EnrollmentMobileSerivceProvider.php.
+Add to file **config/app.php** the EnrollmentMobileSerivceProvider:
 ```
-Add to file ServiceProvider.
-Scool\Curriculum\Providers\EnrollmentMobileServiceProvider::class,
+/*
+* Package Service Providers...
+*/
+Scool\EnrollmentMobile\Providers\EnrollmentMobileServiceProvider::class,
 ```
 
 Add publish files with:
@@ -33,9 +35,21 @@ php artisan vendor:publish --tag=scool_enrollment_mobile
 ## Usage
 
 ``` php
-$skeleton = new Scool\Enrollment();
-echo $skeleton->echoPhrase('Hello, League!');
+public function run()
+{
+    $this->call(EnrollmentMobileSeeder::class);
+}
 ```
+
+## Requeriments
+
+This package use:
+
+* Composer
+* Laravel
+* Acacha/names
+
+
 
 ## Change log
 
