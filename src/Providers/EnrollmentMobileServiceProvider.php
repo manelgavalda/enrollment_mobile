@@ -31,18 +31,19 @@ namespace Scool\EnrollmentMobile\Providers;
 
     public function publishFactories(){
         $this->publishes(
-          [__DIR__.'/../../database/EnrollmentMobile.php' =>
-          database_path().'/factories/EnrollmentMobile.php'],
-            "scool_enrollment"
+          [ SCOOL_ENROLLMENT_MOBILE_PATH . '/database/EnrollmentMobile.php' =>
+            database_path().'/factories/EnrollmentMobileFactory.php'],
+            "scool_enrollment_mobile"
         );
     }
 
     public function publishTests()
     {
         $this->publishes(
-            SCOOL_ENROLLMENT_MOBILE_PATH.
-            '/tests/EnrollmentMobileTest.php',
-            'tests/EnrollmentMobileTest.php'
+        [
+            SCOOL_ENROLLMENT_MOBILE_PATH .
+            '/tests/EnrollmentMobileTest.php' => 'tests/EnrollmentMobileTest.php'
+        ],"scool_enrollment_mobile"
         );
     }
 }
