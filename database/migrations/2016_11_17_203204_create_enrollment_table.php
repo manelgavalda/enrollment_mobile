@@ -38,4 +38,7 @@ class CreateEnrollmentTable extends Migration
     {
         //
     }
+
+
+
 }

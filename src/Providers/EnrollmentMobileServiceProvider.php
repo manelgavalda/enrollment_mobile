@@ -31,8 +31,8 @@ namespace Scool\EnrollmentMobile\Providers;
 
     public function publishFactories(){
         $this->publishes(
-          [__DIR__.'/../../database/Enrollment.php' =>
-          database_path().'/factories/Enrollment.php'],
+          [__DIR__.'/../../database/EnrollmentMobile.php' =>
+          database_path().'/factories/EnrollmentMobile.php'],
             "scool_enrollment"
         );
     }
