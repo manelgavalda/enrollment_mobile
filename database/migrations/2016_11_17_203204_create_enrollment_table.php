@@ -23,23 +23,6 @@ class CreateEnrollmentTable extends Migration
             $table->integer('classroom_id');
             $table->timestamps(); //timestamps
             //$table->userstamps();
-
-
-
-
-//             Ebre-escool antic
-//            $table->increments('enrollment_id');
-//            $table->string('enrollment_periodid');
-//            $table->integer('enrollment_personid');
-//            $table->integer('enrollment_study_id');
-//            $table->integer('enrollment_course_id');
-//            $table->integer('enrollment_group_id');
-//            $table->dateTime('enrollment_entryDate');
-//            $table->timestamp('enrollment_last_update');
-//            $table->integer('enrollment_creationUserId')->nullable();
-//            $table->integer('enrollment_lastupdateUserId')->nullable();
-//            $table->string('enrollment_markedForDeletion');
-//            $table->enum('enrollment_markedForDeletionDate', array('n', 'y'));
         });
     }
 
@@ -50,6 +33,6 @@ class CreateEnrollmentTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('enrollment');
     }
 }
