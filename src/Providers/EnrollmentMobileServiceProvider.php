@@ -32,7 +32,7 @@ use Illuminate\Support\ServiceProvider;
         public function publishFactories()
         {
             $this->publishes(
-          [ SCOOL_ENROLLMENT_MOBILE_PATH . '/database/EnrollmentMobile.php' =>
+          [ SCOOL_ENROLLMENT_MOBILE_PATH . '/database/Enrollment.php' =>
             database_path().'/factories/EnrollmentMobileFactory.php'],
             "scool_enrollment_mobile"
         );
