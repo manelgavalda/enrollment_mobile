@@ -22,6 +22,7 @@ use Illuminate\Support\ServiceProvider;
         {
             $this->loadMigrations();
             $this->publishFactories();
+            $this->publishConfig();
             $this->publishTests();
         }
 
@@ -47,5 +48,14 @@ use Illuminate\Support\ServiceProvider;
             '/tests/EnrollmentMobileTest.php' => 'tests/EnrollmentMobileTest.php'
         ], "scool_enrollment_mobile"
         );
+        }
+        private function publishConfig() {
+            $this->publishes(
+                [ SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment.php' =>
+                    database_path().'/factories/EnrollmentMobileFactory.php'],"scool_enrollment_mobile"
+            );
+            $this->mergeConfigFrom(
+                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment_mobile.php', 'scool_enrollment_mobile'
+            );
         }
     }

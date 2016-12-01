@@ -1,16 +1,12 @@
 <?php
 
-namespace Scool\EnrollmentMobile;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
-/**
- * Class Study
- * @package Scool\Enrollment
- */
-class Study extends Model implements Transformable
+class EnrollmentStudySubmodules extends Model implements Transformable
 {
     use TransformableTrait;
     //
