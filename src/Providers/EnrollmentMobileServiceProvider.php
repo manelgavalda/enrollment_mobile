@@ -2,6 +2,7 @@
 
 namespace Scool\EnrollmentMobile\Providers;
 
+
 use Illuminate\Support\ServiceProvider;
 
     /**
@@ -13,7 +14,7 @@ use Illuminate\Support\ServiceProvider;
         public function register()
         {
             if (!defined('SCOOL_ENROLLMENT_MOBILE_PATH')) {
-                define('SCOOL_ENROLLMENT_MOBILE_PATH', realpath(__DIR__. '/../../'));
+                define('SCOOL_ENROLLMENT_MOBILE_PATH', realpath(__DIR__.'/../../'));
             }
         }
 
@@ -26,7 +27,7 @@ use Illuminate\Support\ServiceProvider;
 
         public function loadMigrations()
         {
-            $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
+            $this->loadMigrationsFrom(SCOOL_ENROLLMENT_MOBILE_PATH.'/database/migrations');
         }
 
         public function publishFactories()
