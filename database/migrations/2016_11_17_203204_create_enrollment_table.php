@@ -25,7 +25,7 @@ class CreateEnrollmentTable extends Migration
             $table->integer('enrollment_creationUserId')->nullable();
             $table->integer('enrollment_lastupdateUserId')->nullable();
             $table->string('enrollment_markedForDeletion');
-            $table->enum('enrollment_markedForDeletionDate',array('n', 'y'));
+            $table->enum('enrollment_markedForDeletionDate', array('n', 'y'));
         });
     }
 
@@ -38,7 +38,4 @@ class CreateEnrollmentTable extends Migration
     {
         //
     }
-
-
-
 }
