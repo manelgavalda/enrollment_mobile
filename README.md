@@ -4,7 +4,7 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status](https://travis-ci.org/manelgavalda/enrollment_mobile.svg?branch=master)](https://travis-ci.org/manelgavalda/enrollment_mobile)
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
+[![StyleCI](https://styleci.io/repos/73415404/shield?branch=master)](https://styleci.io/repos/73415404)
 [![Total Downloads][ico-downloads]][link-downloads]
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
