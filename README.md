@@ -3,7 +3,8 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status](https://travis-ci.org/manelgavalda/enrollment_mobile.svg?branch=master)](https://travis-ci.org/manelgavalda/enrollment_mobile)
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/manelgavalda/enrollment_mobile/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/manelgavalda/enrollment_mobile/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/manelgavalda/enrollment_mobile/badges/build.png?b=master)](https://scrutinizer-ci.com/g/manelgavalda/enrollment_mobile/build-status/master)
 [![StyleCI](https://styleci.io/repos/73415404/shield?branch=master)](https://styleci.io/repos/73415404)
 [![Total Downloads][ico-downloads]][link-downloads]
 
