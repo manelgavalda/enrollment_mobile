@@ -19,11 +19,11 @@ class EnrollmentSeeder extends Seeder
         $this->seedCourses();
     }
 
-    private function seedStudies(){
-
+    private function seedStudies()
+    {
     }
 
-    private function seedCourses(){
-
+    private function seedCourses()
+    {
     }
 }
