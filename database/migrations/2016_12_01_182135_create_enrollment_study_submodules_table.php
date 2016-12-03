@@ -18,7 +18,6 @@ class CreateEnrollmentStudySubmodulesTable extends Migration
             $table->integer('enrollment_id'); // 1 a n enrollment
             $table->integer('study_submodule_id'); //1 a n study_submodules
         });
-
     }
 
     /**

@@ -3,7 +3,7 @@ namespace Scool\EnrollmentMobile;
 
 class ScoolEnrollmentMobile
 {
-//    public static function factories()
+    //    public static function factories()
 //    {
 //        return [
 //            SCOOL_ENROLLMENT__MOBILE_PATH . '/database/factories/ClassroomFactory.php' =>
