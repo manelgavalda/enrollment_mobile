@@ -12,7 +12,6 @@ use App\Http\Requests\EnrollmentUpdateRequest;
 use App\Repositories\EnrollmentRepository;
 use App\Validators\EnrollmentValidator;
 
-
 /**
  * Class EnrollmentsController
  * @package App\Http\Controllers
@@ -53,7 +52,6 @@ class EnrollmentsController extends Controller
         $enrollments = $this->repository->all();
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $enrollments,
             ]);
@@ -71,9 +69,7 @@ class EnrollmentsController extends Controller
      */
     public function store(EnrollmentCreateRequest $request)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $enrollment = $this->repository->create($request->all());
@@ -84,7 +80,6 @@ class EnrollmentsController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
@@ -114,7 +109,6 @@ class EnrollmentsController extends Controller
         $enrollment = $this->repository->find($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $enrollment,
             ]);
@@ -133,7 +127,6 @@ class EnrollmentsController extends Controller
      */
     public function edit($id)
     {
-
         $enrollment = $this->repository->find($id);
 
         return view('enrollments.edit', compact('enrollment'));
@@ -150,9 +143,7 @@ class EnrollmentsController extends Controller
      */
     public function update(EnrollmentUpdateRequest $request, $id)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
             $enrollment = $this->repository->update($id, $request->all());
@@ -163,15 +154,12 @@ class EnrollmentsController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
             return redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
-
             if ($request->wantsJson()) {
-
                 return response()->json([
                     'error'   => true,
                     'message' => $e->getMessageBag()
@@ -195,7 +183,6 @@ class EnrollmentsController extends Controller
         $deleted = $this->repository->delete($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'message' => 'Enrollment deleted.',
                 'deleted' => $deleted,

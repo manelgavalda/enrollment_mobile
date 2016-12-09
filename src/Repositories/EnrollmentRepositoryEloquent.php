@@ -31,7 +31,6 @@ class EnrollmentRepositoryEloquent extends BaseRepository implements EnrollmentR
     */
     public function validator()
     {
-
         return EnrollmentValidator::class;
     }
 
