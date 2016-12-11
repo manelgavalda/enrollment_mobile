@@ -19,7 +19,7 @@ Via Composer:
 $ composer require scool/enrollment_mobile
 ```
 
-Add to file **config/app.php** the EnrollmentMobileSerivceProvider:
+Add to file **config/app.php** the EnrollmentMobileServiceProvider:
 ```
 /*
 * Package Service Providers...
