@@ -1,15 +1,13 @@
 # enrollment_mobile
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
+[![Latest Stable Version](https://poser.pugx.org/manelgavalda/enrollment_mobile/v/stable)](https://packagist.org/packages/manelgavalda/enrollment_mobile)[![Software License][ico-license]](LICENSE.md)
 [![Build Status](https://travis-ci.org/manelgavalda/enrollment_mobile.svg?branch=master)](https://travis-ci.org/manelgavalda/enrollment_mobile)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/manelgavalda/enrollment_mobile/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/manelgavalda/enrollment_mobile/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/manelgavalda/enrollment_mobile/badges/build.png?b=master)](https://scrutinizer-ci.com/g/manelgavalda/enrollment_mobile/build-status/master)
 [![StyleCI](https://styleci.io/repos/73415404/shield?branch=master)](https://styleci.io/repos/73415404)
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Total Downloads](https://poser.pugx.org/manelgavalda/enrollment_mobile/downloads)](https://packagist.org/packages/manelgavalda/enrollment_mobile)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+Projecte mòdul enrollment_mobile
 
 ## Install
 
