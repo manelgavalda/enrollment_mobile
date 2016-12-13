@@ -27,21 +27,35 @@ use Illuminate\Support\ServiceProvider;
 
         public function boot()
         {
+            $this->defineRoutes();
             $this->loadMigrations();
             $this->publishFactories();
             $this->publishConfig();
             $this->publishTests();
         }
 
+        protected function defineRoutes()
+        {
+            if (!$this->app->routesAreCached()) {
+                $router = app('router');
+                $router->group(['namespace' => 'Scool\EnrollmentMobile\Http\Controllers'], function () {
+                    require __DIR__.'/../Http/routes.php';
+                });
+            }
+        }
+
+
         public function loadMigrations()
         {
-            $this->loadMigrationsFrom(SCOOL_ENROLLMENT_MOBILE_PATH.'/database/migrations');
+            $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
+            //$this->loadMigrationsFrom(SCOOL_ENROLLMENT_MOBILE_PATH.'/database/migrations');
         }
 
         public function publishFactories()
         {
             $this->publishes(
-          [ SCOOL_ENROLLMENT_MOBILE_PATH . '/database/Enrollment.php' =>
+          [
+              SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/EnrollmentMobileFactory.php' =>
             database_path().'/factories/EnrollmentMobileFactory.php'],
             "scool_enrollment_mobile"
         );
@@ -63,7 +77,10 @@ use Illuminate\Support\ServiceProvider;
                     database_path().'/factories/EnrollmentMobileFactory.php'], "scool_enrollment_mobile"
             );
             $this->mergeConfigFrom(
-                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment_mobile.php', 'scool_enrollment_mobile'
+                [
+                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment_mobile.php'
+            => config_path() . 'enrollment_mobile'
+                ],"scool_enrollment_mobile"
             );
         }
     }
