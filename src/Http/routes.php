@@ -11,7 +11,7 @@ Route::group([
 ], function() {
     //Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
     Route::group(['prefix' => 'v1'], function () {
-        Route::resource('enrollment', 'EnrollmentsController');
+        Route::resource('enrollments', 'EnrollmentsController');
     });
 });
 
