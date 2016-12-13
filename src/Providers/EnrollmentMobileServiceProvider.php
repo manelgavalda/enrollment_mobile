@@ -16,7 +16,13 @@ use Illuminate\Support\ServiceProvider;
                 define('SCOOL_ENROLLMENT_MOBILE_PATH', realpath(__DIR__.'/../../'));
             }
 
+            //$this->app->register(NamesServiceProvider::class);
+
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\StudyRepositoryEloquent::class);
+
+//            $this->app->bind(StatsRepositoryInterface::class,function() {
+//                return new CacheableStatsRepository(new StatsRepository());
+//            });
         }
 
         public function boot()
