@@ -15,6 +15,8 @@ use Illuminate\Support\ServiceProvider;
             if (!defined('SCOOL_ENROLLMENT_MOBILE_PATH')) {
                 define('SCOOL_ENROLLMENT_MOBILE_PATH', realpath(__DIR__.'/../../'));
             }
+
+            $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\StudyRepositoryEloquent::class);
         }
 
         public function boot()
