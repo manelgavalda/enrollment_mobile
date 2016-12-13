@@ -76,11 +76,11 @@ use Illuminate\Support\ServiceProvider;
                 [ SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment.php' =>
                     database_path().'/factories/EnrollmentMobileFactory.php'], "scool_enrollment_mobile"
             );
-            $this->mergeConfigFrom(
-                [
-                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment_mobile.php'
-            => config_path() . 'enrollment_mobile'
-                ],"scool_enrollment_mobile"
-            );
+//            $this->mergeConfigFrom(
+//                [
+//                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment_mobile.php'
+//            => config_path() . 'enrollment_mobile'
+//                ],"scool_enrollment_mobile"
+//            );
         }
     }
