@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Scool\EnrollmentMobile\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
-use App\Http\Requests\EnrollmentCreateRequest;
-use App\Http\Requests\EnrollmentUpdateRequest;
-use App\Repositories\EnrollmentRepository;
-use App\Validators\EnrollmentValidator;
+use Scool\EnrollmentMobile\Http\Requests\EnrollmentCreateRequest;
+use Scool\EnrollmentMobile\Http\Requests\EnrollmentUpdateRequest;
+use Scool\EnrollmentMobile\Repositories\EnrollmentRepository;
+use Scool\EnrollmentMobile\Validators\EnrollmentValidator;
 
 /**
  * Class EnrollmentsController
