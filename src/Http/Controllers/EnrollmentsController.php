@@ -2,9 +2,7 @@
 
 namespace Scool\EnrollmentMobile\Http\Controllers;
 
-use Illuminate\Http\Request;
 
-use App\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use Scool\EnrollmentMobile\Http\Requests\EnrollmentCreateRequest;
