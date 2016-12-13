@@ -18,7 +18,7 @@ use Illuminate\Support\ServiceProvider;
 
             //$this->app->register(NamesServiceProvider::class);
 
-            $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\StudyRepositoryEloquent::class);
+            $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\EnrollmentRepositoryEloquent::class);
 
 //            $this->app->bind(StatsRepositoryInterface::class,function() {
 //                return new CacheableStatsRepository(new StatsRepository());
