@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Presenters;
+namespace Scool\EnrollmentMobile\Presenters;
 
-use App\Transformers\EnrollmentTransformer;
+use Scool\EnrollmentMobile\Transformers\EnrollmentTransformer;
 use Prettus\Repository\Presenter\FractalPresenter;
 
 /**

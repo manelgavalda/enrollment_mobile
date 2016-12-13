@@ -4,6 +4,10 @@ namespace Scool\EnrollmentMobile\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class EnrollmentCreateRequest
+ * @package Scool\EnrollmentMobile\Http\Requests
+ */
 class EnrollmentCreateRequest extends FormRequest
 {
     /**
