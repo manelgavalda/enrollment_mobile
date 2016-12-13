@@ -2,10 +2,9 @@
 
 namespace Scool\EnrollmentMobile\Providers;
 
-
 use Illuminate\Support\ServiceProvider;
 
-    /**
+/**
      * Class EnrollmentServiceProvider
      * @package Scool\Enrollment\Providers
      */
@@ -49,10 +48,11 @@ use Illuminate\Support\ServiceProvider;
         ], "scool_enrollment_mobile"
         );
         }
-        private function publishConfig() {
+        private function publishConfig()
+        {
             $this->publishes(
                 [ SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment.php' =>
-                    database_path().'/factories/EnrollmentMobileFactory.php'],"scool_enrollment_mobile"
+                    database_path().'/factories/EnrollmentMobileFactory.php'], "scool_enrollment_mobile"
             );
             $this->mergeConfigFrom(
                 SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment_mobile.php', 'scool_enrollment_mobile'
