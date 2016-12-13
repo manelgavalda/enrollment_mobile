@@ -4,7 +4,6 @@ namespace Scool\EnrollmentMobile\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 
-
 /**
  * Class EnrollmentSeeder
  */
