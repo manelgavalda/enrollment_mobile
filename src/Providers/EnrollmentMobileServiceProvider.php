@@ -3,6 +3,7 @@
 namespace Scool\EnrollmentMobile\Providers;
 
 use Acacha\Names\Providers\NamesServiceProvider;
+use Acacha\Stateful\Providers\StatefulServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -18,6 +19,8 @@ use Illuminate\Support\ServiceProvider;
             }
 
             $this->registerNameServiceProvider();
+
+            $this->registerStatefulEloquentServiceProvider();
 
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\EnrollmentRepositoryEloquent::class);
 
@@ -92,5 +95,14 @@ use Illuminate\Support\ServiceProvider;
         protected function registerNameServiceProvider()
         {
             $this->app->register(NamesServiceProvider::class);
+        }
+
+        /*
+         * Register acacha/stateful-eloquent Service Provider.
+         *
+         */
+        protected function registerStatefulEloquentServiceProvider()
+        {
+            $this->app->register(StatefulServiceProvider::class);
         }
     }
