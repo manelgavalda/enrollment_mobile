@@ -2,6 +2,7 @@
 
 namespace Scool\EnrollmentMobile\Providers;
 
+use Acacha\Names\Providers\NamesServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -16,7 +17,7 @@ use Illuminate\Support\ServiceProvider;
                 define('SCOOL_ENROLLMENT_MOBILE_PATH', realpath(__DIR__.'/../../'));
             }
 
-            //$this->app->register(NamesServiceProvider::class);
+            $this->registerNameServiceProvider();
 
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\EnrollmentRepositoryEloquent::class);
 
@@ -82,5 +83,10 @@ use Illuminate\Support\ServiceProvider;
 //            => config_path() . 'enrollment_mobile'
 //                ],"scool_enrollment_mobile"
 //            );
+        }
+
+        protected function registerNameServiceProvider()
+        {
+            $this->app->register(NamesServiceProvider::class);
         }
     }

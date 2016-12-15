@@ -16,5 +16,5 @@ class Enrollment extends Model implements Transformable
     use TransformableTrait, Nameable;
     //
 
-    protected $fillable['name'];
+    protected $fillable = ['name'];
 }
