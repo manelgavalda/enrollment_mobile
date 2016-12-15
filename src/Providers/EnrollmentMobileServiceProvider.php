@@ -85,6 +85,10 @@ use Illuminate\Support\ServiceProvider;
 //            );
         }
 
+        /*
+         * Register acacha/names Service Provider.
+         *
+         */
         protected function registerNameServiceProvider()
         {
             $this->app->register(NamesServiceProvider::class);
