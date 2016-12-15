@@ -17,7 +17,8 @@ class EnrollmentCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        //return false; //Per defecte
+        return true;
     }
 
     /**
