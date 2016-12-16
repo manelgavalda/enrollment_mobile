@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Scool\Foundation\User;
 
 
-class Departament extends Model
+class Department extends Model
 {
     use Nameable;
 //    use HasManyFamilies, Nameable, HasStudies;
