@@ -6,6 +6,5 @@ $factory->define(Scool\EnrollmentMobile\Models\Enrollment::class, function (Fake
 
     return [
         'name' => $faker->name,
-
     ];
 });
