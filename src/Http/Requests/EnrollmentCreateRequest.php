@@ -17,8 +17,11 @@ class EnrollmentCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        //De moment true
+        return true;
     }
+
+
 
     /**
      * Get the validation rules that apply to the request.

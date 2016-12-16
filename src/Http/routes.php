@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 Route::group([
     'middleware' => 'web'], function () {
         Route::group(['middleware' => 'auth'], function () {
@@ -18,7 +16,3 @@ Route::group([
         Route::resource('enrollments', 'EnrollmentsController');
     });
 });
-
-//Route::group(['middleware' => 'auth'], function () {
-//    Route::resource('enrollments', 'EnrollmentsController');
-//});
