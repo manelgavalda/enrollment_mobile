@@ -1,6 +1,9 @@
 <?php
+
 namespace Scool\EnrollmentMobile\Models;
+
 use Illuminate\Database\Eloquent\Model;
+
 /**
  * Class Speciality.
  *
@@ -15,6 +18,7 @@ class Speciality extends Model
     {
         return $this->belongsToMany(config('enrollment_mobile.user_class'));
     }
+
     /**
      * The study submodules that belongs to the speciality.
      */
