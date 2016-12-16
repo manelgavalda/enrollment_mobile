@@ -16,15 +16,7 @@ class EnrollmentMobileSeeder extends Seeder
      */
     public function run()
     {
-        $this->seedStudies();
-        $this->seedCourses();
+        //$this->seedEnrollment();
     }
 
-    private function seedStudies()
-    {
-    }
-
-    private function seedCourses()
-    {
-    }
 }
