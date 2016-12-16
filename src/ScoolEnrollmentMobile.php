@@ -13,8 +13,8 @@ class ScoolEnrollmentMobile
     public static function factories()
     {
         return [
-            SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/EnrollmentMobileFactory.php' =>
-                database_path('/factories/EnrollmentMobileFactory.php'),
+            SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/EnrollmentFactory.php' =>
+                database_path('/factories/EnrollmentFactory.php'),
 //            SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/CycleFactory.php' =>
 //                database_path('/factories/CycleFactory.php'),
 //            SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/DepartmentFactory.php' =>

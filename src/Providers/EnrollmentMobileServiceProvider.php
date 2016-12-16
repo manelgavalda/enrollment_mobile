@@ -55,8 +55,8 @@ use Illuminate\Support\ServiceProvider;
         {
             $this->publishes(
           [
-              SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/EnrollmentMobileFactory.php' =>
-            database_path().'/factories/EnrollmentMobileFactory.php'],
+              SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/EnrollmentFactory.php' =>
+            database_path().'/factories/EnrollmentFactory.php'],
             "scool_enrollment_mobile"
         );
         }
@@ -74,7 +74,7 @@ use Illuminate\Support\ServiceProvider;
         {
             $this->publishes(
                 [ SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment.php' =>
-                    database_path().'/factories/EnrollmentMobileFactory.php'], "scool_enrollment_mobile"
+                    database_path().'/factories/EnrollmentFactory.php'], "scool_enrollment_mobile"
             );
 //            $this->mergeConfigFrom(
 //                [
