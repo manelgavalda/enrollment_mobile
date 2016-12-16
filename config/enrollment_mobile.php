@@ -11,6 +11,6 @@ return [
      */
 
 
-    'user_class' => Scool\EnrollmentMobile\User::class,
+    'user_class' => App\User::class,
 
 ];
