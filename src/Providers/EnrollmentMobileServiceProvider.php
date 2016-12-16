@@ -2,7 +2,9 @@
 
 namespace Scool\EnrollmentMobile\Providers;
 
+use Acacha\Names\Providers\NamesServiceProvider;
 use Illuminate\Support\ServiceProvider;
+use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
 
 /**
      * Class EnrollmentServiceProvider
@@ -16,7 +18,7 @@ use Illuminate\Support\ServiceProvider;
                 define('SCOOL_ENROLLMENT_MOBILE_PATH', realpath(__DIR__.'/../../'));
             }
 
-            //$this->app->register(NamesServiceProvider::class);
+            $this->app->register(NamesServiceProvider::class);
 
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\EnrollmentRepositoryEloquent::class);
 
@@ -47,40 +49,33 @@ use Illuminate\Support\ServiceProvider;
 
         public function loadMigrations()
         {
-            $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
-            //$this->loadMigrationsFrom(SCOOL_ENROLLMENT_MOBILE_PATH.'/database/migrations');
+            $this->loadMigrationsFrom(SCOOL_ENROLLMENT_MOBILE_PATH . '/database/migrations');
         }
 
         public function publishFactories()
         {
             $this->publishes(
-          [
-              SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/EnrollmentFactory.php' =>
-            database_path().'/factories/EnrollmentFactory.php'],
-            "scool_enrollment_mobile"
+                ScoolEnrollmentMobile::factories(),"scool_enrollment_mobile"
         );
+        }
+
+
+        private function publishConfig()
+        {
+            $this->publishes(
+                    ScoolEnrollmentMobile::configs(),"scool_enrollment_mobile"
+                );
+            $this->mergeConfigFrom(
+                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment_mobile.php', 'scool_enrollment_mobile'
+            );
         }
 
         public function publishTests()
         {
             $this->publishes(
-        [
-            SCOOL_ENROLLMENT_MOBILE_PATH .
-            '/tests/EnrollmentMobileTest.php' => 'tests/EnrollmentMobileTest.php'
-        ], "scool_enrollment_mobile"
-        );
-        }
-        private function publishConfig()
-        {
-            $this->publishes(
-                [ SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment.php' =>
-                    database_path().'/factories/EnrollmentFactory.php'], "scool_enrollment_mobile"
+                [
+                    SCOOL_ENROLLMENT_MOBILE_PATH .'/tests/EnrollmentMobileTest.php' => 'tests/EnrollmentMobileTest.php'
+                ], "scool_enrollment_mobile"
             );
-//            $this->mergeConfigFrom(
-//                [
-//                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment_mobile.php'
-//            => config_path() . 'enrollment_mobile'
-//                ],"scool_enrollment_mobile"
-//            );
         }
     }
