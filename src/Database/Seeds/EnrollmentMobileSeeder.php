@@ -3,6 +3,7 @@
 namespace Scool\EnrollmentMobile\Database\Seeds;
 
 
+use EnrollmentsTableSeeder;
 use Illuminate\Database\Seeder;
 use Scool\EnrollmentMobile\Models\Classroom;
 use Scool\EnrollmentMobile\Models\Speciality;
@@ -23,7 +24,7 @@ class EnrollmentMobileSeeder extends Seeder
      */
     public function run()
     {
-        //$this->seedEnrollment();
+        $this->call(EnrollmentsTableSeeder::class);
     }
 
 }
