@@ -47,7 +47,6 @@ class EnrollmentsController extends Controller
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
         $enrollments = $this->repository->all();
-
         if (request()->wantsJson()) {
             return response()->json([
                 'data' => $enrollments,

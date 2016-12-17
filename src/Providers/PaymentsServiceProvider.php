@@ -10,7 +10,7 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
      * Class EnrollmentServiceProvider
      * @package Scool\Enrollment\Providers
      */
-    class EnrollmentMobileServiceProvider extends ServiceProvider
+    class PaymentsServiceProvider extends ServiceProvider
     {
         public function register()
         {
@@ -66,7 +66,7 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
                     ScoolEnrollmentMobile::configs(),"scool_enrollment_mobile"
                 );
             $this->mergeConfigFrom(
-                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment_mobile.php', 'scool_enrollment_mobile'
+                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/payment.php', 'scool_enrollment_mobile'
             );
         }
 
