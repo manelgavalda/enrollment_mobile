@@ -18,8 +18,15 @@ class EnrollmentsTableSeeder extends Seeder
     }
     private function createEnrollment($name)
     {
-        $enrollment = Enrollment::firstOrCreate([
-            'name' => $name
+        $enrollment = Enrollment::create([
+            'name' => $name,
+            'validated' => true, //només les vàlides són actives.
+            'finished' => false, //indica si la matricula està finalitzada.
+            //$table->integer('period_id'); //De moment descartat //obligatori
+            'study_id' => 1,
+            'course_id' => 1,
+            'classroom_id' => 1,
+            //timestamps
         ]);
     }
 
