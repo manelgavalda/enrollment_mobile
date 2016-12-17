@@ -15,6 +15,7 @@ class CreateEnrollmentsTable extends Migration
     {
         Schema::create('enrollments', function (Blueprint $table) {
             $table->increments('id'); //obligatori
+            $table->string('name'); //CAMP NO FORMA PART, només vull provar.
             $table->boolean('validated'); //només les vàlides són actives.
             $table->boolean('finished'); //indica si la matricula està finalitzada.
             //$table->integer('period_id'); //De moment descartat //obligatori
@@ -33,6 +34,6 @@ class CreateEnrollmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('enrollment');
+        Schema::dropIfExists('enrollments');
     }
 }
