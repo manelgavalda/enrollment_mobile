@@ -55,7 +55,7 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
         public function publishFactories()
         {
             $this->publishes(
-                ScoolEnrollmentMobile::factories(),"scool_enrollment_mobile"
+                ScoolEnrollmentMobile::factories(), "scool_enrollment_mobile"
         );
         }
 
@@ -63,7 +63,7 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
         private function publishConfig()
         {
             $this->publishes(
-                    ScoolEnrollmentMobile::configs(),"scool_enrollment_mobile"
+                    ScoolEnrollmentMobile::configs(), "scool_enrollment_mobile"
                 );
             $this->mergeConfigFrom(
                 SCOOL_ENROLLMENT_MOBILE_PATH . '/config/payment.php', 'scool_enrollment_mobile'

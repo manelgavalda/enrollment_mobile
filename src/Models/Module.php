@@ -4,6 +4,7 @@ namespace Scool\EnrollmentMobile\Models;
 
 use Acacha\Names\Traits\Nameable;
 use Illuminate\Database\Eloquent\Model;
+
 //use Scool\EnrollmentMobile\Traits\HasCourses;
 //use Scool\EnrollmentMobile\Traits\HasStudy;
 //use Scool\EnrollmentMobile\Traits\HasSubmodules;

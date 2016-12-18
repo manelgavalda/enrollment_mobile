@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 //use Scool\EnrollmentMobile\Traits\HasLaw;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
+
 /**
  * Class Study.
  *
@@ -16,7 +17,7 @@ use Prettus\Repository\Traits\TransformableTrait;
  */
 class Study extends Model implements Transformable
 {
-//    use HasLaw,HasDepartments,HasCourses,Nameable,TransformableTrait;
+    //    use HasLaw,HasDepartments,HasCourses,Nameable,TransformableTrait;
     use Nameable,TransformableTrait;
     /**
      * The attributes that are mass assignable.

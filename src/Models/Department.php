@@ -2,13 +2,11 @@
 
 namespace Scool\EnrollmentMobile\Models;
 
-
 use Acacha\Names\Traits\Nameable;
 use Illuminate\Database\Eloquent\Model;
 //use Scool\Curriculum\Traits\HasManyFamilies;
 //use Scool\Curriculum\Traits\HasStudies;
 use Scool\Foundation\User;
-
 
 class Department extends Model
 {

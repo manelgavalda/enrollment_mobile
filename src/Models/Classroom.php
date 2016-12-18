@@ -3,6 +3,7 @@
 namespace Scool\EnrollmentMobile\Models;
 
 use Illuminate\Database\Eloquent\Model;
+
 //use Scool\EnrollmentMobile\Traits\HasSubmodules;
 
 /**
@@ -12,5 +13,5 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Classroom extends Model
 {
-//    use HasSubmodules;
+    //    use HasSubmodules;
 }
