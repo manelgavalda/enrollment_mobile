@@ -3,6 +3,7 @@
 namespace Scool\EnrollmentMobile\Models;
 
 use Illuminate\Database\Eloquent\Model;
+
 /**
  * Class SubmoduleType.
  *
@@ -10,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class SubmoduleType extends Model
 {
-//    /**
+    //    /**
 //     * Name value for type regular.
 //     */
 //    const REGULAR_TYPE = "Regular";
