@@ -20,6 +20,6 @@ class Enrollment extends Model implements Transformable
 
     //public $timestamps = false;
     //all camps
-    protected $fillable = ['id','name','validated','finished','study_id','course_id','classroom_id','updated_at','created_at'];
+    protected $fillable = ['id','name','validated','finished','study_id','course_id','classroom_id'];
     //TODO: mirar estats (enrollment). Implementar i definir estats(exemple porta(esborrany,valida,feta).
 }
