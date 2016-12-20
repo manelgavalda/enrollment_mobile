@@ -21,7 +21,6 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
             $this->registerNameServiceProvider();
 
             $this->registerStatefulEloquentServiceProvider();
-            $this->app->register(NamesServiceProvider::class);
 
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\EnrollmentRepositoryEloquent::class);
 
