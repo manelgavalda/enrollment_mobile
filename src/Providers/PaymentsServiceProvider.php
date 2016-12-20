@@ -3,14 +3,18 @@
 namespace Scool\EnrollmentMobile\Providers;
 
 use Acacha\Names\Providers\NamesServiceProvider;
+<<<<<<< HEAD:src/Providers/EnrollmentMobileServiceProvider.php
 use Acacha\Stateful\Providers\StatefulServiceProvider;
+=======
+>>>>>>> 92a55437464d45d8f28bae26a5a84fc695a03898:src/Providers/PaymentsServiceProvider.php
 use Illuminate\Support\ServiceProvider;
+use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
 
 /**
      * Class EnrollmentServiceProvider
      * @package Scool\Enrollment\Providers
      */
-    class EnrollmentMobileServiceProvider extends ServiceProvider
+    class PaymentsServiceProvider extends ServiceProvider
     {
         public function register()
         {
@@ -18,9 +22,13 @@ use Illuminate\Support\ServiceProvider;
                 define('SCOOL_ENROLLMENT_MOBILE_PATH', realpath(__DIR__.'/../../'));
             }
 
+<<<<<<< HEAD:src/Providers/EnrollmentMobileServiceProvider.php
             $this->registerNameServiceProvider();
 
             $this->registerStatefulEloquentServiceProvider();
+=======
+            $this->app->register(NamesServiceProvider::class);
+>>>>>>> 92a55437464d45d8f28bae26a5a84fc695a03898:src/Providers/PaymentsServiceProvider.php
 
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\EnrollmentRepositoryEloquent::class);
 
@@ -51,41 +59,34 @@ use Illuminate\Support\ServiceProvider;
 
         public function loadMigrations()
         {
-            $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
-            //$this->loadMigrationsFrom(SCOOL_ENROLLMENT_MOBILE_PATH.'/database/migrations');
+            $this->loadMigrationsFrom(SCOOL_ENROLLMENT_MOBILE_PATH . '/database/migrations');
         }
 
         public function publishFactories()
         {
             $this->publishes(
-          [
-              SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/EnrollmentMobileFactory.php' =>
-            database_path().'/factories/EnrollmentMobileFactory.php'],
-            "scool_enrollment_mobile"
+                ScoolEnrollmentMobile::factories(), "scool_enrollment_mobile"
         );
+        }
+
+
+        private function publishConfig()
+        {
+            $this->publishes(
+                    ScoolEnrollmentMobile::configs(), "scool_enrollment_mobile"
+                );
+            $this->mergeConfigFrom(
+                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/payment.php', 'scool_enrollment_mobile'
+            );
         }
 
         public function publishTests()
         {
             $this->publishes(
-        [
-            SCOOL_ENROLLMENT_MOBILE_PATH .
-            '/tests/EnrollmentMobileTest.php' => 'tests/EnrollmentMobileTest.php'
-        ], "scool_enrollment_mobile"
-        );
-        }
-        private function publishConfig()
-        {
-            $this->publishes(
-                [ SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment.php' =>
-                    database_path().'/factories/EnrollmentMobileFactory.php'], "scool_enrollment_mobile"
+                [
+                    SCOOL_ENROLLMENT_MOBILE_PATH .'/tests/EnrollmentMobileTest.php' => 'tests/EnrollmentMobileTest.php'
+                ], "scool_enrollment_mobile"
             );
-//            $this->mergeConfigFrom(
-//                [
-//                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/enrollment_mobile.php'
-//            => config_path() . 'enrollment_mobile'
-//                ],"scool_enrollment_mobile"
-//            );
         }
 
         /*

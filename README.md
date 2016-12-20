@@ -17,12 +17,12 @@ Via Composer:
 $ composer require scool/enrollment_mobile
 ```
 
-Add to file **config/app.php** the EnrollmentMobileServiceProvider:
+Add to file **config/app.php** the PaymentsServiceProvider:
 ```
 /*
 * Package Service Providers...
 */
-Scool\EnrollmentMobile\Providers\EnrollmentMobileServiceProvider::class,
+Scool\EnrollmentMobile\Providers\PaymentsServiceProvider::class,
 ```
 
 Add publish files with:
