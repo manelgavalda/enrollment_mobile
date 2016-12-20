@@ -3,10 +3,7 @@
 namespace Scool\EnrollmentMobile\Providers;
 
 use Acacha\Names\Providers\NamesServiceProvider;
-<<<<<<< HEAD:src/Providers/EnrollmentMobileServiceProvider.php
 use Acacha\Stateful\Providers\StatefulServiceProvider;
-=======
->>>>>>> 92a55437464d45d8f28bae26a5a84fc695a03898:src/Providers/PaymentsServiceProvider.php
 use Illuminate\Support\ServiceProvider;
 use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
 
@@ -21,14 +18,10 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
             if (!defined('SCOOL_ENROLLMENT_MOBILE_PATH')) {
                 define('SCOOL_ENROLLMENT_MOBILE_PATH', realpath(__DIR__.'/../../'));
             }
-
-<<<<<<< HEAD:src/Providers/EnrollmentMobileServiceProvider.php
             $this->registerNameServiceProvider();
 
             $this->registerStatefulEloquentServiceProvider();
-=======
             $this->app->register(NamesServiceProvider::class);
->>>>>>> 92a55437464d45d8f28bae26a5a84fc695a03898:src/Providers/PaymentsServiceProvider.php
 
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\EnrollmentRepositoryEloquent::class);
 
