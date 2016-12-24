@@ -1,17 +1,15 @@
 <?php
 
-namespace Scool\EnrollmentMobile\Models;
+namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
 
-//use Scool\EnrollmentMobile\Traits\HasSubmodules;
-
-/**
- * Class Classroom.
- *
- * @package Scool\EnrollmentMobile\Models
- */
-class Classroom extends Model
+class Classroom extends Model implements Transformable
 {
-    //    use HasSubmodules;
+    use TransformableTrait;
+
+    protected $fillable = [];
+
 }
