@@ -5,13 +5,13 @@ Route::group([
         Route::group(['middleware' => 'auth'], function () {
             Route::resource('enrollments', 'EnrollmentsController');
         });
-    Route::group(['middleware' => 'auth'], function () {
-        Route::resource('classrooms', 'ClassroomsController');
+        Route::group(['middleware' => 'auth'], function () {
+            Route::resource('classrooms', 'ClassroomsController');
+        });
+        Route::group(['middleware' => 'auth'], function () {
+            Route::resource('courses', 'CoursesController');
+        });
     });
-    Route::group(['middleware' => 'auth'], function () {
-        Route::resource('courses', 'CoursesController');
-    });
-});
 
 Route::group([
     'middleware' => 'api',
