@@ -31,7 +31,6 @@ class ClassroomRepositoryEloquent extends BaseRepository implements ClassroomRep
     */
     public function validator()
     {
-
         return ClassroomValidator::class;
     }
 
