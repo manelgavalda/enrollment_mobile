@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Repositories;
+namespace Scool\EnrollmentMobile\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use App\Repositories\ClassroomRepository;
-use App\Entities\Classroom;
-use App\Validators\ClassroomValidator;
+use Scool\EnrollmentMobile\Repositories\ClassroomRepository;
+use Scool\EnrollmentMobile\Models\Classroom;
+use Scool\EnrollmentMobile\Validators\ClassroomValidator;
 
 /**
  * Class ClassroomRepositoryEloquent

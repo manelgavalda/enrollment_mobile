@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace Scool\EnrollmentMobile\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -13,7 +13,8 @@ class ClassroomCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        //return false;
+        return true;
     }
 
     /**

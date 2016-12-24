@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Transformers;
+namespace Scool\EnrollmentMobile\Transformers;
 
 use League\Fractal\TransformerAbstract;
-use App\Entities\Classroom;
+use Scool\EnrollmentMobile\Models\Classroom;
 
 /**
  * Class ClassroomTransformer

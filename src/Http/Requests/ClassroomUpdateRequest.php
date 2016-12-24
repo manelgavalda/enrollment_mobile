@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Requests;
+namespace Scool\EnrollmentMobile\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 
 class ClassroomUpdateRequest extends FormRequest
 {
@@ -13,7 +14,8 @@ class ClassroomUpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        //return false;
+        return true;
     }
 
     /**
