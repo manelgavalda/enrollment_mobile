@@ -15,4 +15,7 @@ Route::group([
     Route::group(['prefix' => 'v1'], function () {
         Route::resource('enrollments', 'EnrollmentsController');
     });
+    Route::group(['prefix' => 'v1'], function () {
+        Route::resource('classrooms', 'ClassroomsController');
+    });
 });
