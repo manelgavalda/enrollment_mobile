@@ -14,4 +14,5 @@ class Course extends Model implements Transformable
 {
     use TransformableTrait;
     //use HasSubmodules;
+    protected $fillable = [];
 }

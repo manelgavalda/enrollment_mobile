@@ -8,7 +8,10 @@ Route::group([
     Route::group(['middleware' => 'auth'], function () {
         Route::resource('classrooms', 'ClassroomsController');
     });
+    Route::group(['middleware' => 'auth'], function () {
+        Route::resource('courses', 'CoursesController');
     });
+});
 
 Route::group([
     'middleware' => 'api',
@@ -20,5 +23,8 @@ Route::group([
     });
     Route::group(['prefix' => 'v1'], function () {
         Route::resource('classrooms', 'ClassroomsController');
+    });
+    Route::group(['prefix' => 'v1'], function () {
+        Route::resource('courses', 'CoursesController');
     });
 });
