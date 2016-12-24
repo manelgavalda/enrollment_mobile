@@ -32,6 +32,8 @@ class ScoolEnrollmentMobile
                 database_path('/factories/StudyFactory.php'),
             SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/SubmoduleFactory.php' =>
                 database_path('/factories/SubmoduleFactory.php'),
+            SCOOL_ENROLLMENT_MOBILE_PATH . '/database/factories/CourseFactory.php' =>
+                database_path('/factories/CourseFactory.php'),
         ];
     }
 
