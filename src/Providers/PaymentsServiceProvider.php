@@ -23,6 +23,7 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
             $this->registerStatefulEloquentServiceProvider();
 
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentRepository::class, \Scool\EnrollmentMobile\Repositories\EnrollmentRepositoryEloquent::class);
+            $this->app->bind(\Scool\EnrollmentMobile\Repositories\ClassroomRepository::class, \Scool\EnrollmentMobile\Repositories\ClassroomRepositoryEloquent::class);
 
 //            $this->app->bind(StatsRepositoryInterface::class,function() {
 //                return new CacheableStatsRepository(new StatsRepository());
