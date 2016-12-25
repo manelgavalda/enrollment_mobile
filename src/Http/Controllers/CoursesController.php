@@ -12,7 +12,6 @@ use Scool\EnrollmentMobile\Http\Requests\CourseUpdateRequest;
 use Scool\EnrollmentMobile\Repositories\CourseRepository;
 use Scool\EnrollmentMobile\Validators\CourseValidator;
 
-
 class CoursesController extends Controller
 {
 
@@ -44,7 +43,6 @@ class CoursesController extends Controller
         $courses = $this->repository->all();
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $courses,
             ]);
@@ -62,9 +60,7 @@ class CoursesController extends Controller
      */
     public function store(CourseCreateRequest $request)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $course = $this->repository->create($request->all());
@@ -75,7 +71,6 @@ class CoursesController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
@@ -105,7 +100,6 @@ class CoursesController extends Controller
         $course = $this->repository->find($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $course,
             ]);
@@ -124,7 +118,6 @@ class CoursesController extends Controller
      */
     public function edit($id)
     {
-
         $course = $this->repository->find($id);
 
         return view('courses.edit', compact('course'));
@@ -141,9 +134,7 @@ class CoursesController extends Controller
      */
     public function update(CourseUpdateRequest $request, $id)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
             $course = $this->repository->update($id, $request->all());
@@ -154,15 +145,12 @@ class CoursesController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
             return redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
-
             if ($request->wantsJson()) {
-
                 return response()->json([
                     'error'   => true,
                     'message' => $e->getMessageBag()
@@ -186,7 +174,6 @@ class CoursesController extends Controller
         $deleted = $this->repository->delete($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'message' => 'Course deleted.',
                 'deleted' => $deleted,

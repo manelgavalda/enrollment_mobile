@@ -31,7 +31,6 @@ class CourseRepositoryEloquent extends BaseRepository implements CourseRepositor
     */
     public function validator()
     {
-
         return CourseValidator::class;
     }
 
