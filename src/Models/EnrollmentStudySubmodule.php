@@ -13,5 +13,4 @@ class EnrollmentStudySubmodule extends Model implements Transformable
     use TransformableTrait;
 
     protected $fillable = [];
-
 }

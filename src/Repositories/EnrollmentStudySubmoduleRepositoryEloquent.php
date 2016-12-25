@@ -31,7 +31,6 @@ class EnrollmentStudySubmoduleRepositoryEloquent extends BaseRepository implemen
     */
     public function validator()
     {
-
         return EnrollmentStudySubmoduleValidator::class;
     }
 
