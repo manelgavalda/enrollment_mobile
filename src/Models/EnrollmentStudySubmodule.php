@@ -8,6 +8,8 @@ use Prettus\Repository\Traits\TransformableTrait;
 
 class EnrollmentStudySubmodule extends Model implements Transformable
 {
+    public $timestamps = false;
+
     use TransformableTrait;
 
     protected $fillable = [];
