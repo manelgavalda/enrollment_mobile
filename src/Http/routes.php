@@ -11,6 +11,9 @@ Route::group([
     Route::group(['middleware' => 'auth'], function () {
         Route::resource('courses', 'CoursesController');
     });
+    Route::group(['middleware' => 'auth'], function () {
+        Route::resource('enrollmentStudySubmodules', 'EnrollmentStudySubmodulesController');
+    });
 });
 
 Route::group([
@@ -26,5 +29,8 @@ Route::group([
     });
     Route::group(['prefix' => 'v1'], function () {
         Route::resource('courses', 'CoursesController');
+    });
+    Route::group(['prefix' => 'v1'], function () {
+        Route::resource('enrollmentStudySubmodules', 'EnrollmentStudySubmodulesController');
     });
 });
