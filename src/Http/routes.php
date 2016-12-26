@@ -27,7 +27,7 @@ Route::group([
             Route::resource('submodules', 'SubmodulesController');
         });
         Route::group(['middleware' => 'auth'], function () {
-            Route::resource('submodulesType', 'SubmodulesTypeController');
+            Route::resource('submoduleTypes', 'SubmoduleTypesController');
         });
     });
 
@@ -62,6 +62,6 @@ Route::group([
         Route::resource('submodules', 'SubmodulesController');
     });
     Route::group(['prefix' => 'v1'], function () {
-        Route::resource('submodulesType', 'SubmodulesTypeController');
+        Route::resource('submoduleTypes', 'SubmoduleTypesController');
     });
 });
