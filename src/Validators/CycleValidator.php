@@ -7,7 +7,6 @@ use \Prettus\Validator\LaravelValidator;
 
 class CycleValidator extends LaravelValidator
 {
-
     protected $rules = [
         ValidatorInterface::RULE_CREATE => [],
         ValidatorInterface::RULE_UPDATE => [],

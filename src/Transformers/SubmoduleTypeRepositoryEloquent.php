@@ -31,7 +31,6 @@ class SubmoduleTypeRepositoryEloquent extends BaseRepository implements Submodul
     */
     public function validator()
     {
-
         return SubmoduleTypeValidator::class;
     }
 

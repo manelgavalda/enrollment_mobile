@@ -12,7 +12,6 @@ use Scool\EnrollmentMobile\Http\Requests\CycleUpdateRequest;
 use Scool\EnrollmentMobile\Repositories\CycleRepository;
 use Scool\EnrollmentMobile\Validators\CycleValidator;
 
-
 class CyclesController extends Controller
 {
 
@@ -44,7 +43,6 @@ class CyclesController extends Controller
         $cycles = $this->repository->all();
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $cycles,
             ]);
@@ -62,9 +60,7 @@ class CyclesController extends Controller
      */
     public function store(CycleCreateRequest $request)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $cycle = $this->repository->create($request->all());
@@ -75,7 +71,6 @@ class CyclesController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
@@ -105,7 +100,6 @@ class CyclesController extends Controller
         $cycle = $this->repository->find($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $cycle,
             ]);
@@ -124,7 +118,6 @@ class CyclesController extends Controller
      */
     public function edit($id)
     {
-
         $cycle = $this->repository->find($id);
 
         return view('cycles.edit', compact('cycle'));
@@ -141,9 +134,7 @@ class CyclesController extends Controller
      */
     public function update(CycleUpdateRequest $request, $id)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
             $cycle = $this->repository->update($id, $request->all());
@@ -154,15 +145,12 @@ class CyclesController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
             return redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
-
             if ($request->wantsJson()) {
-
                 return response()->json([
                     'error'   => true,
                     'message' => $e->getMessageBag()
@@ -186,7 +174,6 @@ class CyclesController extends Controller
         $deleted = $this->repository->delete($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'message' => 'Cycle deleted.',
                 'deleted' => $deleted,

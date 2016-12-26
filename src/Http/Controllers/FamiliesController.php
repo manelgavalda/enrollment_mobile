@@ -12,7 +12,6 @@ use Scool\EnrollmentMobile\Http\Requests\FamilyUpdateRequest;
 use Scool\EnrollmentMobile\Repositories\FamilyRepository;
 use Scool\EnrollmentMobile\Validators\FamilyValidator;
 
-
 class FamiliesController extends Controller
 {
 
@@ -44,7 +43,6 @@ class FamiliesController extends Controller
         $families = $this->repository->all();
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $families,
             ]);
@@ -62,9 +60,7 @@ class FamiliesController extends Controller
      */
     public function store(FamilyCreateRequest $request)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $family = $this->repository->create($request->all());
@@ -75,7 +71,6 @@ class FamiliesController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
@@ -105,7 +100,6 @@ class FamiliesController extends Controller
         $family = $this->repository->find($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $family,
             ]);
@@ -124,7 +118,6 @@ class FamiliesController extends Controller
      */
     public function edit($id)
     {
-
         $family = $this->repository->find($id);
 
         return view('families.edit', compact('family'));
@@ -141,9 +134,7 @@ class FamiliesController extends Controller
      */
     public function update(FamilyUpdateRequest $request, $id)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
             $family = $this->repository->update($id, $request->all());
@@ -154,15 +145,12 @@ class FamiliesController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
             return redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
-
             if ($request->wantsJson()) {
-
                 return response()->json([
                     'error'   => true,
                     'message' => $e->getMessageBag()
@@ -186,7 +174,6 @@ class FamiliesController extends Controller
         $deleted = $this->repository->delete($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'message' => 'Family deleted.',
                 'deleted' => $deleted,

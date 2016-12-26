@@ -12,7 +12,6 @@ use Scool\EnrollmentMobile\Http\Requests\SubmoduleTypeUpdateRequest;
 use Scool\EnrollmentMobile\Repositories\SubmoduleTypeRepository;
 use Scool\EnrollmentMobile\Validators\SubmoduleTypeValidator;
 
-
 class SubmoduleTypesController extends Controller
 {
 
@@ -44,7 +43,6 @@ class SubmoduleTypesController extends Controller
         $submoduleTypes = $this->repository->all();
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $submoduleTypes,
             ]);
@@ -62,9 +60,7 @@ class SubmoduleTypesController extends Controller
      */
     public function store(SubmoduleTypeCreateRequest $request)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $submoduleType = $this->repository->create($request->all());
@@ -75,7 +71,6 @@ class SubmoduleTypesController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
@@ -105,7 +100,6 @@ class SubmoduleTypesController extends Controller
         $submoduleType = $this->repository->find($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $submoduleType,
             ]);
@@ -124,7 +118,6 @@ class SubmoduleTypesController extends Controller
      */
     public function edit($id)
     {
-
         $submoduleType = $this->repository->find($id);
 
         return view('submoduleTypes.edit', compact('submoduleType'));
@@ -141,9 +134,7 @@ class SubmoduleTypesController extends Controller
      */
     public function update(SubmoduleTypeUpdateRequest $request, $id)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
             $submoduleType = $this->repository->update($id, $request->all());
@@ -154,15 +145,12 @@ class SubmoduleTypesController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
             return redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
-
             if ($request->wantsJson()) {
-
                 return response()->json([
                     'error'   => true,
                     'message' => $e->getMessageBag()
@@ -186,7 +174,6 @@ class SubmoduleTypesController extends Controller
         $deleted = $this->repository->delete($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'message' => 'SubmoduleType deleted.',
                 'deleted' => $deleted,
