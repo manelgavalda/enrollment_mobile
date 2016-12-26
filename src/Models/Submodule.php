@@ -27,7 +27,7 @@ class Submodule extends Model
      */
     protected $fillable = ['name', 'order' , 'total_hours', 'week_hours', 'start_date', 'finish_date'];
     /**
-     * Get the type os study submodule.
+     * Get the type os study submodules.
      */
     public function type()
     {

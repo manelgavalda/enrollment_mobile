@@ -26,6 +26,12 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\ClassroomRepository::class, \Scool\EnrollmentMobile\Repositories\ClassroomRepositoryEloquent::class);
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\CourseRepository::class, \Scool\EnrollmentMobile\Repositories\CourseRepositoryEloquent::class);
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\EnrollmentStudySubmoduleRepository::class, \Scool\EnrollmentMobile\Repositories\EnrollmentStudySubmoduleRepositoryEloquent::class);
+            $this->app->bind(\Scool\EnrollmentMobile\Repositories\CycleRepository::class, \Scool\EnrollmentMobile\Repositories\CycleRepositoryEloquent::class);
+            $this->app->bind(\Scool\EnrollmentMobile\Repositories\FamilyRepository::class, \Scool\EnrollmentMobile\Repositories\FamilyRepositoryEloquent::class);
+            $this->app->bind(\Scool\EnrollmentMobile\Repositories\ModuleRepository::class, \Scool\EnrollmentMobile\Repositories\ModuleRepositoryEloquent::class);
+            $this->app->bind(\Scool\EnrollmentMobile\Repositories\SubmoduleRepository::class, \Scool\EnrollmentMobile\Repositories\SubmoduleRepositoryEloquent::class);
+            $this->app->bind(\Scool\EnrollmentMobile\Repositories\SubmoduleTypeRepository::class, \Scool\EnrollmentMobile\Repositories\SubmoduleTypeRepositoryEloquent::class);
+
 //            $this->app->bind(StatsRepositoryInterface::class,function() {
 //                return new CacheableStatsRepository(new StatsRepository());
 //            });
