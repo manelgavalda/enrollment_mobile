@@ -31,7 +31,6 @@ class CycleRepositoryEloquent extends BaseRepository implements CycleRepository
     */
     public function validator()
     {
-
         return CycleValidator::class;
     }
 

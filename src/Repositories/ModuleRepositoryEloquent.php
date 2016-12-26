@@ -31,7 +31,6 @@ class ModuleRepositoryEloquent extends BaseRepository implements ModuleRepositor
     */
     public function validator()
     {
-
         return ModuleValidator::class;
     }
 

@@ -31,7 +31,6 @@ class FamilyRepositoryEloquent extends BaseRepository implements FamilyRepositor
     */
     public function validator()
     {
-
         return FamilyValidator::class;
     }
 
