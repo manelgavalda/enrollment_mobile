@@ -133,7 +133,7 @@ class EnrollmentsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  EnrollmentUpdateRequest $request
-     * @param  string            $id
+     * @param  $id string
      *
      * @return Response
      */
@@ -142,7 +142,7 @@ class EnrollmentsController extends Controller
         try {
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
-            $enrollment = $this->repository->update($id, $request->all());
+            $enrollment = $this->repository->update( $request->all(), $id);
 
             $response = [
                 'message' => 'Enrollment updated.',
