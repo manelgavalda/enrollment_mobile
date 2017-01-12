@@ -31,7 +31,7 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\ModuleRepository::class, \Scool\EnrollmentMobile\Repositories\ModuleRepositoryEloquent::class);
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\SubmoduleRepository::class, \Scool\EnrollmentMobile\Repositories\SubmoduleRepositoryEloquent::class);
             $this->app->bind(\Scool\EnrollmentMobile\Repositories\SubmoduleTypeRepository::class, \Scool\EnrollmentMobile\Repositories\SubmoduleTypeRepositoryEloquent::class);
-
+            //:end-bindings:
 //            $this->app->bind(StatsRepositoryInterface::class,function() {
 //                return new CacheableStatsRepository(new StatsRepository());
 //            });
