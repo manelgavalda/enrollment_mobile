@@ -22,4 +22,5 @@ class Enrollment extends Model implements Transformable
     //all camps
     protected $fillable = ['id','name','validated','finished','study_id','course_id','classroom_id'];
     //TODO: mirar estats (enrollment). Implementar i definir estats(exemple porta(esborrany,valida,feta).
+    //TODO: Necessari vàlid i no.
 }
