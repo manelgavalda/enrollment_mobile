@@ -21,8 +21,11 @@ class EnrollmentCreateRequest extends FormRequest
         //return false; //Per defecte
 
         //De moment true
-
+//if (auth:user()->can('update enrollments')) {
         return true;
+        //}
+        //return false;
+        //TODO: crear requests de show, delete... crear permissos amb un seed. (create writter(BREAD(Browse,Read...)). Crear rol manage per donar-li tots els anteriors.
     }
 
 
