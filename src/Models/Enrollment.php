@@ -23,4 +23,5 @@ class Enrollment extends Model implements Transformable
     protected $fillable = ['id','name','validated','finished','study_id','course_id','classroom_id'];
     //TODO: mirar estats (enrollment). Implementar i definir estats(exemple porta(esborrany,valida,feta).
     //TODO: Necessari vàlid i no.
+    //TODO: Afegir rutes minim a un Model.
 }
