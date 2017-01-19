@@ -5,8 +5,8 @@ namespace Scool\EnrollmentMobile\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Auth;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 /**
  * Class EnrollmentPermissionSeeder
