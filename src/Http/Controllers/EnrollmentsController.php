@@ -4,6 +4,7 @@ namespace Scool\EnrollmentMobile\Http\Controllers;
 
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
+use Scool\EnrollmentMobile\Http\Requests\EnrollmentBrowseRequest;
 use Scool\EnrollmentMobile\Http\Requests\EnrollmentCreateRequest;
 use Scool\EnrollmentMobile\Http\Requests\EnrollmentUpdateRequest;
 use Scool\EnrollmentMobile\Repositories\EnrollmentRepository;
@@ -43,7 +44,7 @@ class EnrollmentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(EnrollmentBrowseRequest $request)
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
         $enrollments = $this->repository->all();
