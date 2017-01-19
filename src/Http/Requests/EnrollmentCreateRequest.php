@@ -17,7 +17,7 @@ class EnrollmentCreateRequest extends FormRequest
      */
     public function authorize()
     {
-
+        return Auth::user()->can('create enrollments');
         //return false; //Per defecte
 
         //De moment true

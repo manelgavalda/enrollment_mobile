@@ -17,8 +17,7 @@ class EnrollmentUpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        //return false;
-        return true;
+        return Auth::user()->can('edit enrollments');
     }
 
     /**
