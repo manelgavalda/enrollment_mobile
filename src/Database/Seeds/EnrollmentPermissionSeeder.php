@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Contracts\Permission;
 use Spatie\Permission\Contracts\Role;
 
+/**
+ * Class EnrollmentPermissionSeeder
+ * @package Scool\EnrollmentMobile\Database\Seeds
+ */
 class EnrollmentPermissionSeeder extends Seeder
 {
 
