@@ -3,6 +3,7 @@
 namespace Scool\EnrollmentMobile\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class EnrollmentCreateRequest
@@ -17,7 +18,7 @@ class EnrollmentBrowseRequest extends FormRequest
      */
     public function authorize()
     {
-        return Auth::user()->can('show enrollments');
+        return Auth::user()->can('list enrollments');
         //return false; //Per defecte
 
         //De moment true

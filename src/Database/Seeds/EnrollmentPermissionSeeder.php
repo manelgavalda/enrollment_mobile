@@ -22,16 +22,16 @@ class EnrollmentPermissionSeeder extends Seeder
      */
     public function run()
     {
-        $user='administrator';
-
+        Permission::create(['name' => 'browse enrollments']);
+        Permission::create(['name' => 'read enrollments']);
         Permission::create(['name' => 'edit enrollments']);
-        Permission::create(['name' => 'show enrollments']);
-        Permission::create(['name' => 'remove enrollments']);
-
-        Role::create(['name' => 'administrator']);
-
-        $user->givePermissionTo('edit enrollments');
-        $user->assignRole('administrator','admin');
-
+        Permission::create(['name' => 'add enrollments']);
+        Permission::create(['name' => 'delete enrollments']);
+        $role = Role::create(['name' => 'manage enrollments']);
+        $role->givePermissionTo('browse enrollments');
+        $role->givePermissionTo('read enrollments');
+        $role->givePermissionTo('edit enrollments');
+        $role->givePermissionTo('add enrollments');
+        $role->givePermissionTo('delete enrollments');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Scool\EnrollmentMobile\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use Scool\EnrollmentMobile\Http\Requests\EnrollmentBrowseRequest;
@@ -104,6 +105,7 @@ class EnrollmentsController extends Controller
      */
     public function show($id)
     {
+        return Auth::user()->can('view enrollment');
         $enrollment = $this->repository->find($id);
 
         if (request()->wantsJson()) {
@@ -178,6 +180,8 @@ class EnrollmentsController extends Controller
      */
     public function destroy($id)
     {
+        return Auth::user()->can('delete enrollments');
+
         $deleted = $this->repository->delete($id);
 
         if (request()->wantsJson()) {
