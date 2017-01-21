@@ -23,11 +23,11 @@ class EnrollmentMobileSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(EnrollmentPermissionSeeder::class);
         $this->call(EnrollmentsTableSeeder::class);
         $this->call(ClassroomsTableSeeder::class);
         $this->call(CoursesTableSeeder::class);
         $this->call(EnrollmentStudySubmodulesTableSeeder::class);
-        $this->call(EnrollmentPermissionSeeder::class);
         //$this->call(CyclesTableSeeder::class);
     }
 }

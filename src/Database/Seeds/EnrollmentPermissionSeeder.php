@@ -4,7 +4,6 @@ namespace Scool\EnrollmentMobile\Database\Seeds;
 
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
@@ -15,7 +14,7 @@ use Spatie\Permission\Models\Role;
 class EnrollmentPermissionSeeder extends Seeder
 {
 
-    /**
+    /**>
      * Run the database seeds.
      *
      * @return void
