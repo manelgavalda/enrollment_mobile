@@ -2,9 +2,9 @@
 
 namespace Scool\EnrollmentMobile\Http\Requests;
 
-use GuzzleHttp\Psr7\Response;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Response;
 
 /**
  * Class EnrollmentCreateRequest
@@ -19,20 +19,15 @@ class EnrollmentCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return Auth::user()->can('create enrollments');
-        //return false; //Per defecte
+        return Auth::user()->can('add enrollments');
 
-        //De moment true
-//if (auth:user()->can('update enrollments')) {
-        //}
-        //return false;
         //TODO: crear requests de show, delete... crear permissos amb un seed. (create writter(BREAD(Browse,Read...)). Crear rol manage per donar-li tots els anteriors.
     }
 
     public function forbiddenResponse()
     {
 
-        return Response::make('Permission denied on create enrollment', 403);
+        return Response::make('Permission denied on adding enrollment', 403);
     }
 
     /**
