@@ -3,6 +3,7 @@
 namespace Scool\EnrollmentMobile\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -32,4 +33,11 @@ class EnrollmentUpdateRequest extends FormRequest
             'name' => 'required|min:5|max:30'
         ];
     }
+
+    public function forbiddenResponse()
+    {
+        return Response::make('Permission denied on updating enrollment', 403);
+    }
+
+
 }

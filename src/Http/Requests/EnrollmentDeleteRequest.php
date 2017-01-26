@@ -2,6 +2,7 @@
 namespace Scool\EnrollmentMobile\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -31,4 +32,10 @@ class EnrollmentDeleteRequest extends FormRequest
 
         ];
     }
+
+    public function forbiddenResponse()
+    {
+        return Response::make('Permission denied on deleting enrollment', 403);
+    }
+
 }
