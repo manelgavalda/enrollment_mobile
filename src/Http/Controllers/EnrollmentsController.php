@@ -6,6 +6,7 @@ use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 use Scool\EnrollmentMobile\Http\Requests\EnrollmentBrowseRequest;
 use Scool\EnrollmentMobile\Http\Requests\EnrollmentCreateRequest;
+use Scool\EnrollmentMobile\Http\Requests\EnrollmentDeleteRequest;
 use Scool\EnrollmentMobile\Http\Requests\EnrollmentUpdateRequest;
 use Scool\EnrollmentMobile\Repositories\EnrollmentRepository;
 use Scool\EnrollmentMobile\Validators\EnrollmentValidator;
@@ -176,10 +177,8 @@ class EnrollmentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(EnrollmentDeleteRequest $request, $id)
     {
-        //return Auth::user()->can('delete enrollments');
-
         $deleted = $this->repository->delete($id);
 
         if (request()->wantsJson()) {
