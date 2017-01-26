@@ -26,7 +26,6 @@ class EnrollmentCreateRequest extends FormRequest
 
     public function forbiddenResponse()
     {
-
         return Response::make('Permission denied on adding enrollment', 403);
     }
 

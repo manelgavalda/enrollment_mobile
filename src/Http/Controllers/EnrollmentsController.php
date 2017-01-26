@@ -144,7 +144,7 @@ class EnrollmentsController extends Controller
         try {
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
-            $enrollment = $this->repository->update( $request->all(), $id);
+            $enrollment = $this->repository->update($request->all(), $id);
 
             $response = [
                 'message' => 'Enrollment updated.',
