@@ -55,7 +55,7 @@ class EnrollmentsController extends Controller
             ]);
         }
 
-        return view('enrollments.index', compact('enrollments'));
+        return view('enrollment_mobile::enrollments.index', compact('enrollments'));
     }
 
     /**
