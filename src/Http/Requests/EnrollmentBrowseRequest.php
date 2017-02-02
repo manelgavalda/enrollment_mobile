@@ -18,6 +18,7 @@ class EnrollmentBrowseRequest extends FormRequest
      */
     public function authorize()
     {
+        //return true;
         return Auth::user()->can('browse enrollments');
     }
 
@@ -32,4 +33,10 @@ class EnrollmentBrowseRequest extends FormRequest
             //
         ];
     }
+
+    public function forbiddenResponse()
+    {
+        return Response::make('Permission denied on showing enrollments', 403);
+    }
+
 }
