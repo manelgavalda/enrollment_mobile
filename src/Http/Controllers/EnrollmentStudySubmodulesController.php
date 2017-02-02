@@ -48,7 +48,7 @@ class EnrollmentStudySubmodulesController extends Controller
             ]);
         }
 
-        return view('enrollmentStudySubmodules.index', compact('enrollmentStudySubmodules'));
+        return view('enrollment_mobile::enrollmentStudySubmodules.index', compact('enrollmentStudySubmodules'));
     }
 
     /**

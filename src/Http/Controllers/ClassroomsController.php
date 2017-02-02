@@ -48,7 +48,7 @@ class ClassroomsController extends Controller
             ]);
         }
 
-        return view('classrooms.index', compact('classrooms'));
+        return view('enrollment_mobile::classrooms.index', compact('classrooms'));
     }
 
     /**

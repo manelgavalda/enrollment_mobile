@@ -48,7 +48,7 @@ class FamiliesController extends Controller
             ]);
         }
 
-        return view('families.index', compact('families'));
+        return view('enrollment_mobile::families.index', compact('families'));
     }
 
     /**

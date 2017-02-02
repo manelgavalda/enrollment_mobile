@@ -8,7 +8,7 @@ Route::group([
             Route::resource('courses', 'CoursesController');
             Route::resource('enrollmentStudySubmodules', 'EnrollmentStudySubmodulesController');
             Route::resource('families', 'FamiliesController');
-            Route::resource('module', 'ModulesController');
+            Route::resource('modules', 'ModulesController');
             Route::resource('cycles', 'CyclesController');
             Route::resource('submodules', 'SubmodulesController');
             Route::resource('submoduleTypes', 'SubmoduleTypesController');

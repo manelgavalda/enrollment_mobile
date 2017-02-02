@@ -48,7 +48,7 @@ class SubmoduleTypesController extends Controller
             ]);
         }
 
-        return view('submoduleTypes.index', compact('submoduleTypes'));
+        return view('enrollment_mobile::submoduleTypes.index', compact('submoduleTypes'));
     }
 
     /**

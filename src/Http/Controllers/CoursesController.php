@@ -48,7 +48,7 @@ class CoursesController extends Controller
             ]);
         }
 
-        return view('courses.index', compact('courses'));
+        return view('enrollment_mobile::courses.index', compact('courses'));
     }
 
     /**

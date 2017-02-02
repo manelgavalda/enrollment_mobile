@@ -48,7 +48,7 @@ class CyclesController extends Controller
             ]);
         }
 
-        return view('cycles.index', compact('cycles'));
+        return view('enrollment_mobile::cycles.index', compact('cycles'));
     }
 
     /**
