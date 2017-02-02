@@ -37,5 +37,4 @@ class EnrollmentDeleteRequest extends FormRequest
     {
         return Response::make('Permission denied on deleting enrollment', 403);
     }
-
 }
