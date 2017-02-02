@@ -25,7 +25,7 @@ Add to file **config/app.php** the PaymentsServiceProvider:
 Scool\EnrollmentMobile\Providers\PaymentsServiceProvider::class,
 ```
 
-Add publish files with:
+And publish files with:
 
 ```bash
 php artisan vendor:publish --tag=scool_enrollment_mobile
