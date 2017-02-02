@@ -46,7 +46,11 @@ This package use:
 
 * Composer
 * Laravel
-* Acacha/names
+* acacha/names
+* acacha/l5-repository
+* scool/foundation
+* acacha/stateful-eloquent
+* Admin-lte Template
 
 
 
