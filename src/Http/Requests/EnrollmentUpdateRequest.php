@@ -38,6 +38,4 @@ class EnrollmentUpdateRequest extends FormRequest
     {
         return Response::make('Permission denied on updating enrollment', 403);
     }
-
-
 }

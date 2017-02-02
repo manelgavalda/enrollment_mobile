@@ -38,5 +38,4 @@ class EnrollmentBrowseRequest extends FormRequest
     {
         return Response::make('Permission denied on showing enrollments', 403);
     }
-
 }
