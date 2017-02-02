@@ -44,6 +44,7 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
             $this->publishFactories();
             $this->publishConfig();
             $this->publishTests();
+            $this->publishViews();
         }
 
         protected function defineRoutes()
@@ -87,6 +88,11 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
                     SCOOL_ENROLLMENT_MOBILE_PATH .'/tests/EnrollmentMobileTest.php' => 'tests/EnrollmentMobileTest.php'
                 ], "scool_enrollment_mobile"
             );
+        }
+
+        public function publishViews()
+        {
+            $this->loadMigrationsFrom(SCOOL_ENROLLMENT_MOBILE_PATH . '/database/migrations');
         }
 
         /*
