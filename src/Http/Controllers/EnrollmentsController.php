@@ -113,7 +113,7 @@ class EnrollmentsController extends Controller
             ]);
         }
 
-        return view('enrollments.show', compact('enrollment'));
+        return view('enrollment_mobile::enrollments.show', compact('enrollment'));
     }
 
 
@@ -128,7 +128,7 @@ class EnrollmentsController extends Controller
     {
         $enrollment = $this->repository->find($id);
 
-        return view('enrollments.edit', compact('enrollment'));
+        return view('enrollment_mobile::enrollments.edit', compact('enrollment'));
     }
 
 
