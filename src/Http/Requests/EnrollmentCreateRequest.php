@@ -19,7 +19,8 @@ class EnrollmentCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return Auth::user()->can('add enrollments');
+        return true;
+        //return Auth::user()->can('add enrollments');
 
         //TODO: crear requests de show, delete... crear permissos amb un seed. (create writter(BREAD(Browse,Read...)). Crear rol manage per donar-li tots els anteriors.
     }

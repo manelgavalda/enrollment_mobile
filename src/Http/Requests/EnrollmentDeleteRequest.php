@@ -18,7 +18,8 @@ class EnrollmentDeleteRequest extends FormRequest
      */
     public function authorize()
     {
-        return Auth::user()->can('delete enrollments');
+        return true;
+        //return Auth::user()->can('delete enrollments');
     }
 
     /**

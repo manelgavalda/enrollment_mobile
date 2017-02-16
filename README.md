@@ -31,6 +31,10 @@ And publish files with:
 php artisan vendor:publish --tag=scool_enrollment_mobile
 ```
 
+Change extends for acacha/foundation user with HasRole trait.
+```
+use Scool\Foundation\User as Authenticatable;
+```
 ## Usage
 
 ``` php
