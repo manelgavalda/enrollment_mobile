@@ -2,7 +2,9 @@
 
 namespace Scool\EnrollmentMobile\Http\Requests;
 
+use Auth;
 use Illuminate\Foundation\Http\FormRequest;
+use Response;
 
 class CourseCreateRequest extends FormRequest
 {
@@ -13,7 +15,7 @@ class CourseCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+      return Auth::user()->can('edit courses');
     }
 
     /**
@@ -26,5 +28,10 @@ class CourseCreateRequest extends FormRequest
         return [
             //
         ];
+    }
+
+    public function forbiddenResponse()
+    {
+      return Response::make('Permission denied on creating courses', 403);
     }
 }
