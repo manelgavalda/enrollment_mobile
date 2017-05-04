@@ -3,8 +3,8 @@
 namespace Scool\EnrollmentMobile\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Auth;
-use Response;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class EnrollmentUpdateRequest

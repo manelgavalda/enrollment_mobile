@@ -5,6 +5,7 @@ namespace Scool\EnrollmentMobile\Models;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
+use Scool\EnrollmentMobile\Traits\HasSubmodules;
 
 /**
  * Class Course
@@ -12,7 +13,6 @@ use Prettus\Repository\Traits\TransformableTrait;
  */
 class Course extends Model implements Transformable
 {
-    use TransformableTrait;
-    //use HasSubmodules;
+    use TransformableTrait, HasSubmodules;
     protected $fillable = [];
 }

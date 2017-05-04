@@ -4,6 +4,9 @@ namespace Scool\EnrollmentMobile\Models;
 
 use Acacha\Names\Traits\Nameable;
 use Illuminate\Database\Eloquent\Model;
+use Scool\EnrollmentMobile\Traits\HasCourses;
+use Scool\EnrollmentMobile\Traits\HasStudy;
+use Scool\EnrollmentMobile\Traits\HasSubmodules;
 
 //use Scool\EnrollmentMobile\Traits\HasCourses;
 //use Scool\EnrollmentMobile\Traits\HasStudy;
@@ -16,7 +19,7 @@ use Illuminate\Database\Eloquent\Model;
 class Module extends Model
 {
     use Nameable;
-//    use HasCourses,HasSubmodules, HasStudy, Nameable;
+    use HasCourses,HasSubmodules, HasStudy, Nameable;
     /**
      * The attributes that are mass assignable.
      *
