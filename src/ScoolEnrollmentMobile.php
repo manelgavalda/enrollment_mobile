@@ -56,8 +56,14 @@ class ScoolEnrollmentMobile
     public static function vue()
     {
         return [
-            SCOOL_ENROLLMENT_MOBILE_PATH . '/resources/assets/js/components/ActivityFeed.vue' =>
-                resource_path('/assets/js/components/ActivityFeed.vue'),
+            SCOOL_ENROLLMENT_MOBILE_PATH . '/resources/assets/js/components/dashboard/ActivityFeed.vue' =>
+                resource_path('/assets/js/components/dashboard/ActivityFeed.vue'),
+            SCOOL_ENROLLMENT_MOBILE_PATH . '/resources/assets/js/components/dashboard/IncreaseButton.vue' =>
+                resource_path('/assets/js/components/dashboard/IncreaseButton.vue'),
+            SCOOL_ENROLLMENT_MOBILE_PATH . '/resources/assets/js/components/dashboard/SmallBox.vue' =>
+                resource_path('/assets/js/components/dashboard/SmallBox.vue'),
+            SCOOL_ENROLLMENT_MOBILE_PATH . '/resources/assets/js/components/dashboard/Chart.vue' =>
+                resource_path('/assets/js/components/dashboard/Chart.vue'),
         ];
     }
 }

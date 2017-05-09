@@ -228,81 +228,6 @@
         </div>
 
         <div class="row">
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-            <div class="col-md-1">
-                <chart
-                        :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-                        :values="[10, 42, 4, 23, 43, 54]"
-                ></chart>
-            </div>
-        </div>
-
-        <div class="row">
             <div class="col-md-12">
                 <chart
                         :labels="{{ $labels1 }}"
@@ -312,20 +237,8 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12">
-                <chart
-                        :labels="{{ $labels2 }}"
-                        :values="{{ $values2 }}"
-                ></chart>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md-6">
                 <chart url="dashboard/graphs/1"
-                ></chart>
-            </div>
-            <div class="col-md-6">
-                <chart url="dashboard/graphs/2"
                 ></chart>
             </div>
             {{--<div class="col-md-6">--}}
