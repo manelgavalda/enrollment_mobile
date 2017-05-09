@@ -49,4 +49,15 @@ class ScoolEnrollmentMobile
                 config_path('payment.php'),
         ];
     }
+
+    /**
+     * @return array
+     */
+    public static function vue()
+    {
+        return [
+            SCOOL_ENROLLMENT_MOBILE_PATH . '/resources/assets/js/components/ActivityFeed.vue' =>
+                resource_path('/assets/js/components/ActivityFeed.vue'),
+        ];
+    }
 }

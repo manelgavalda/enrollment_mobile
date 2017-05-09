@@ -12,6 +12,7 @@ Route::group([
             Route::resource('cycles', 'CyclesController');
             Route::resource('submodules', 'SubmodulesController');
             Route::resource('submoduleTypes', 'SubmoduleTypesController');
+            Route::resource('dashboard', 'DashboardController');
         });
     });
 
@@ -30,5 +31,6 @@ Route::group([
         Route::resource('cycles', 'CyclesController');
         Route::resource('submodules', 'SubmodulesController');
         Route::resource('submoduleTypes', 'SubmoduleTypesController');
+        Route::resource('dashboard', 'DashboardController');
     });
 });

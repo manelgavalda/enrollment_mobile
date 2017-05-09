@@ -44,6 +44,7 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
             $this->publishFactories();
             $this->publishConfig();
             $this->publishTests();
+            $this->publishVueComponents();
             $this->loadViews();
         }
 
@@ -72,18 +73,24 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
         public function publishFactories()
         {
             $this->publishes(
-                ScoolEnrollmentMobile::factories(), "scool_enrollment_mobile"
+                ScoolEnrollmentMobile::factories(), "enrollment_mobile"
         );
         }
 
+        public function publishVueComponents()
+        {
+            $this->publishes(
+                ScoolEnrollmentMobile::vue(), "enrollment_mobile"
+            );
+        }
 
         private function publishConfig()
         {
             $this->publishes(
-                    ScoolEnrollmentMobile::configs(), "scool_enrollment_mobile"
+                    ScoolEnrollmentMobile::configs(), "enrollment_mobile"
                 );
             $this->mergeConfigFrom(
-                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/payment.php', 'scool_enrollment_mobile'
+                SCOOL_ENROLLMENT_MOBILE_PATH . '/config/payment.php', 'enrollment_mobile'
             );
         }
 
@@ -92,7 +99,7 @@ use Scool\EnrollmentMobile\ScoolEnrollmentMobile;
             $this->publishes(
                 [
                     SCOOL_ENROLLMENT_MOBILE_PATH .'/tests/EnrollmentMobileTest.php' => 'tests/EnrollmentMobileTest.php'
-                ], "scool_enrollment_mobile"
+                ], "enrollment_mobile"
             );
         }
 
