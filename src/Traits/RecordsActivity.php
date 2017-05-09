@@ -54,7 +54,7 @@ trait RecordsActivity
      */
     public function activity()
     {
-        return $this->morphMany('App\Activity', 'subject');
+        return $this->morphMany('Scool\EnrollmentMobile\Models\Activity', 'subject');
     }
 
     /**

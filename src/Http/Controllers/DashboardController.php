@@ -7,7 +7,7 @@ namespace Scool\EnrollmentMobile\Http\Controllers;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use Scool\EnrollmentMobile\Activity;
+use Scool\EnrollmentMobile\Models\Activity;
 
 /**
  * Class DashboardController
@@ -51,7 +51,7 @@ class DashboardController extends Controller
             //Codi a executar si cache MISS
 //            return DB::table()->get();
 // $this?
-            $model='\\App\\'.ucfirst($model);
+            $model='\\Scool\EnrollmentMobile\Models\\'.ucfirst($model);
             return $model::all()->count();
         });
 
@@ -64,7 +64,9 @@ class DashboardController extends Controller
      */
     public function createRandom($model)
     {
-        factory($model)->states('user')->create();
+//        $model='\\Scool\EnrollmentMobile\Models\\'.ucfirst($model);
+        $model='Scool\\EnrollmentMobile\\Models\\'.ucfirst($model);
+        factory($model)->create();
     }
 
     /**

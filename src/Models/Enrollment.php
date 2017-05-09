@@ -9,6 +9,7 @@ use Scool\EnrollmentMobile\Traits\RecordsActivity;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
+use Scool\Foundation\User;
 
 /**
  * Class Enrollment
@@ -25,4 +26,12 @@ class Enrollment extends Model implements Transformable
     //TODO: mirar estats (enrollment). Implementar i definir estats(exemple porta(esborrany,valida,feta).
     //TODO: Necessari vàlid i no.
     //TODO: Afegir rutes minim a un Model.
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

@@ -13,6 +13,11 @@ Route::group([
             Route::resource('submodules', 'SubmodulesController');
             Route::resource('submoduleTypes', 'SubmoduleTypesController');
             Route::resource('dashboard', 'DashboardController');
+
+            //Dashboard
+            Route::get('activity-feed', 'DashboardController@fetchActivityFeed');
+            Route::get('dashboard/{model}/number', 'DashboardController@Number')->name('model-number');
+            Route::get('create/random/{model}', 'DashboardController@createRandom')->name('createRandom');
         });
     });
 

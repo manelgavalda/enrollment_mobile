@@ -1,6 +1,6 @@
 <?php
 
-namespace Scool\EnrollmentMobile;
+namespace Scool\EnrollmentMobile\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

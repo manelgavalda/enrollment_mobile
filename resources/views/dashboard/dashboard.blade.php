@@ -9,9 +9,7 @@
     <div class="container-fluid spark-screen">
         <div class="row">
 
-            <dashboard-small-box name="task"></dashboard-small-box>
-
-            {{--<dashboard-small-box name="threads"></dashboard-small-box>--}}
+            <dashboard-small-box name="enrollment"></dashboard-small-box>
 
 
             <div class="col-lg-3 col-xs-6">
@@ -216,9 +214,7 @@
                     <!-- /.box-header -->
                     <div class="box-body">
 
-                        <dashboard-increase-button name="tasks"></dashboard-increase-button>
-
-                        <dashboard-increase-button name="threads"></dashboard-increase-button>
+                        <dashboard-increase-button name="enrollment"></dashboard-increase-button>
 
                     </div>
                     <!-- /.box-body -->
@@ -236,18 +232,7 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <chart url="dashboard/graphs/1"
-                ></chart>
-            </div>
-            {{--<div class="col-md-6">--}}
-            {{--<chart url="/api/graph/1"--}}
-            {{--:labels="{{ $labels2 }}"--}}
-            {{--:values="{{ $values2 }}"--}}
-            {{--></chart>--}}
-            {{--</div>--}}
-        </div>
+
 
         <div class="row">
             <div class="col-md-12">
