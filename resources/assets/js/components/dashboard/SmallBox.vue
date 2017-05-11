@@ -44,7 +44,7 @@
         },
         methods: {
             eventName() {
-                return voca.capitalize(pluralize.singular(this.name))+'Created'
+                return "\\Scool\\EnrollmentMobile\\Events\\" +voca.capitalize(pluralize.singular(this.name))+'Created'
             },
             dashboardValue (name) {
                 var component = this

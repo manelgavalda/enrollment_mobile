@@ -5,6 +5,7 @@ namespace Scool\EnrollmentMobile\Models;
 use Acacha\Names\Traits\Nameable;
 
 use Acacha\Stateful\Traits\StatefulTrait;
+use Scool\EnrollmentMobile\Events\EnrollmentCreated;
 use Scool\EnrollmentMobile\Traits\RecordsActivity;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
@@ -26,6 +27,10 @@ class Enrollment extends Model implements Transformable
     //TODO: mirar estats (enrollment). Implementar i definir estats(exemple porta(esborrany,valida,feta).
     //TODO: Necessari vàlid i no.
     //TODO: Afegir rutes minim a un Model.
+
+    protected $events = [
+        'created' => EnrollmentCreated::class
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

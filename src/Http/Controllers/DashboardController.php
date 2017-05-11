@@ -47,15 +47,15 @@ class DashboardController extends Controller
      */
     public function number($model)
     {
-        $value = Cache::remember('tasksNumber',5, function () use ($model){
+//        $value = Cache::remember('tasksNumber',5, function () use ($model){
             //Codi a executar si cache MISS
 //            return DB::table()->get();
 // $this?
             $model='\\Scool\EnrollmentMobile\Models\\'.ucfirst($model);
             return $model::all()->count();
-        });
+//        });
 
-        return $value;
+//        return $value;
 
     }
 
