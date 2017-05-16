@@ -35,6 +35,12 @@ Change extends for acacha/foundation user with HasRole trait.
 ```
 use Scool\Foundation\User as Authenticatable;
 ```
+
+PHP7.0-gd extension for PDF:
+```
+sudo apt-get install php7.0-gd
+
+```
 ## Usage
 
 ``` php
@@ -55,6 +61,7 @@ This package use:
 * scool/foundation
 * acacha/stateful-eloquent
 * Admin-lte Template
+* php7.0-gd extension
 
 
 
