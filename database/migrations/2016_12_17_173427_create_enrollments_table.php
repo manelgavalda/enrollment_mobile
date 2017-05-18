@@ -19,13 +19,25 @@ class CreateEnrollmentsTable extends Migration
             $table->boolean('validated'); //només les vàlides són actives.
             $table->boolean('finished'); //indica si la matricula està finalitzada.
             //$table->integer('period_id'); //De moment descartat //obligatori
-            $table->integer('study_id');
-            $table->integer('course_id');
-            $table->integer('classroom_id');
+            $table->integer('classroom_id')->unsigned()->nullable(); //indica si la matricula està finalitzada.
+            $table->integer('study_id')->unsigned()->nullable();
+            $table->integer('course_id')->unsigned()->nullable();
             $table->timestamps(); //timestamps
-            //$table->dropTimestamps();
-            //$table->userstamps();
+
+
+
+//            $table->foreign('classroom_id')->references('id')->on('classrooms'); //indica si la matricula està finalitzada.
+//            $table->foreign('study_id')->references('id')->on('studies');
+//            $table->foreign('course_id')->references('id')->on('courses');
         });
+
+//        Schema::create('enrollment_user', function (Blueprint $table) {
+//            $table->integer('enrollment_id')->unsigned();
+//            $table->integer('user_id')->unsigned();
+//            $table->timestamps();
+//            $table->unique(['enrollment_id', 'user_id']);
+//        });
+
     }
 
     /**

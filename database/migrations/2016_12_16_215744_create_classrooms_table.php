@@ -17,7 +17,15 @@ class CreateClassroomsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->timestamps();
+            $table->integer('enrollment_id')->unsigned()->nullable();
         });
+
+//        Schema::create('classroom_enrollment', function (Blueprint $table) {
+//            $table->integer('classroom_id')->unsigned();
+//            $table->integer('enrollment_id')->unsigned();
+//            $table->timestamps();
+//            $table->unique(['classroom_id', 'enrollment_id']);
+//        });
     }
     /**
      * Reverse the migrations.
@@ -26,6 +34,8 @@ class CreateClassroomsTable extends Migration
      */
     public function down()
     {
+
         Schema::dropIfExists('classrooms');
+
     }
 }

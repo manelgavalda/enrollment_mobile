@@ -48,7 +48,7 @@ class EnrollmentsController extends Controller
     public function index(EnrollmentBrowseRequest $request)
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
-        $enrollments = $this->repository->all();
+        $enrollments = $this->repository->with('classroom')->all();
         if (request()->wantsJson()) {
             return response()->json([
                 'data' => $enrollments,

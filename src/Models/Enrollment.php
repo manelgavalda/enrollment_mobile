@@ -39,4 +39,20 @@ class Enrollment extends Model implements Transformable
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function classroom()
+    {
+        return $this->hasOne("Scool\EnrollmentMobile\Models\Classroom");
+    }
+
+//    /**
+//     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+//     */
+//    public function enrollment()
+//    {
+//        return $this->hasOne("Scool\EnrollmentMobile\Classroom");
+//    }
 }
