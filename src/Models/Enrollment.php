@@ -5,12 +5,13 @@ namespace Scool\EnrollmentMobile\Models;
 use Acacha\Names\Traits\Nameable;
 
 use Acacha\Stateful\Traits\StatefulTrait;
+use Manelgavalda\EnrollmentMobileTest\User;
 use Scool\EnrollmentMobile\Events\EnrollmentCreated;
 use Scool\EnrollmentMobile\Traits\RecordsActivity;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
-use Scool\Foundation\User;
+//use Scool\Foundation\User;
 
 /**
  * Class Enrollment
@@ -23,7 +24,7 @@ class Enrollment extends Model implements Transformable
 
     //public $timestamps = false;
     //all camps
-    protected $fillable = ['id','name','validated','finished','study_id','course_id','classroom_id'];
+    protected $fillable = ['id','name','validated','finished', 'user_id', 'study_id','course_id','classroom_id'];
     //TODO: mirar estats (enrollment). Implementar i definir estats(exemple porta(esborrany,valida,feta).
     //TODO: Necessari vàlid i no.
     //TODO: Afegir rutes minim a un Model.
@@ -37,7 +38,7 @@ class Enrollment extends Model implements Transformable
      */
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(Scool\Foundation\User::class, 'user_id');
     }
 
     /**

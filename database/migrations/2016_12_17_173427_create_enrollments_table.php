@@ -19,6 +19,7 @@ class CreateEnrollmentsTable extends Migration
             $table->boolean('validated'); //només les vàlides són actives.
             $table->boolean('finished'); //indica si la matricula està finalitzada.
             //$table->integer('period_id'); //De moment descartat //obligatori
+            $table->integer('user_id')->unsigned()->nullable(); //indica si la matricula està finalitzada.
             $table->integer('classroom_id')->unsigned()->nullable(); //indica si la matricula està finalitzada.
             $table->integer('study_id')->unsigned()->nullable();
             $table->integer('course_id')->unsigned()->nullable();

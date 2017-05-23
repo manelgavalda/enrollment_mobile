@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Scool\EnrollmentMobile\Models\Enrollment;
+use Scool\Foundation\User;
+
 Route::group([
     'middleware' => 'web'], function () {
         Route::group(['middleware' => 'auth'], function () {
@@ -37,5 +41,12 @@ Route::group([
         Route::resource('submodules', 'SubmodulesController');
         Route::resource('submoduleTypes', 'SubmoduleTypesController');
         Route::resource('dashboard', 'DashboardController');
+        Route::get('/enrollments_from_user', function (Request $request) {
+//            return Enrollment::all();
+//            $user = Auth::user();
+            $enrollment_id = Auth::user()->enrollment_id;
+
+            return Enrollment::find($enrollment_id);
+        });
     });
 });
