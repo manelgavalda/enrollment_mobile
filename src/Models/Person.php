@@ -1,6 +1,6 @@
 <?php
 
-namespace Scool\EnrollmentMobile\Entities;
+namespace Scool\EnrollmentMobile\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
