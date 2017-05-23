@@ -8,6 +8,7 @@ use Scool\EnrollmentMobile\Models\Speciality;
 use Scool\EnrollmentMobile\Models\Submodule;
 use Scool\EnrollmentMobile\Models\Module;
 use Scool\EnrollmentMobile\Models\Course;
+use Scool\EnrollmentMobile\Models\Person;
 
 //use Acacha\Periods\Period;
 
@@ -28,6 +29,6 @@ class EnrollmentMobileSeeder extends Seeder
         $this->call(ClassroomsTableSeeder::class);
         $this->call(CoursesTableSeeder::class);
         $this->call(EnrollmentStudySubmodulesTableSeeder::class);
-        //$this->call(CyclesTableSeeder::class);
+        $this->call(PeopleTableSeeder::class);
     }
 }

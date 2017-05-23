@@ -10,7 +10,22 @@ class Person extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'username',
+        'email', 'tsi',
+        'birth_date',
+        'name',
+        'dni',
+        'location',
+        'sex',
+        'telephone',
+        'mobile_phone',
+        'first_surname',
+        'second_surname',
+        'personal_email',
+        'postal_code',
+        'user_id'
+    ];
 
     public function user()
     {

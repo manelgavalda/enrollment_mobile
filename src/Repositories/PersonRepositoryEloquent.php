@@ -5,7 +5,7 @@ namespace Scool\EnrollmentMobile\Repositories;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Scool\EnrollmentMobile\Repositories\PersonRepository;
-use Scool\EnrollmentMobile\Entities\Person;
+use Scool\EnrollmentMobile\Models\Person;
 use Scool\EnrollmentMobile\Validators\PersonValidator;
 
 /**
