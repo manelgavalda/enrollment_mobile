@@ -14,6 +14,20 @@ class CoursesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Course::class, 20)->create();
+        factory(Course::class)->create(
+            [
+                "name" => "1ASIX/DAM",
+            ]
+        );
+        factory(Course::class)->create(
+            [
+                "name" => "2ASIX",
+            ]
+        );
+        factory(Course::class)->create(
+            [
+                "name" => "2DAM",
+            ]
+        );
     }
 }

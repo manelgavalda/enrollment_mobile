@@ -30,5 +30,8 @@ class EnrollmentMobileSeeder extends Seeder
         $this->call(CoursesTableSeeder::class);
         $this->call(EnrollmentStudySubmodulesTableSeeder::class);
         $this->call(PeopleTableSeeder::class);
+        $this->call(ModulesTableSeeder::class);
+        $this->call(SubmodulesTableSeeder::class);
+        $this->call(StudiesTableSeeder::class);
     }
 }
