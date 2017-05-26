@@ -23,12 +23,12 @@ class CreatePeopleTable extends Migration
             $table->string('dni');
             $table->string('location');
             $table->string('sex');
-            $table->integer('telephone');
-            $table->integer('mobile_phone');
-            $table->integer('first_surname');
-            $table->integer('second_surname');
-            $table->integer('personal_email');
-            $table->integer('postal_code');
+            $table->integer('telephone')->nullable();
+            $table->integer('mobile_phone')->nullable();
+            $table->integer('first_surname')->nullable();
+            $table->integer('second_surname')->nullable();
+            $table->integer('personal_email')->nullable();
+            $table->integer('postal_code')->nullable();
 
             $table->integer('user_id')->unsigned()->nullable();
             $table->timestamps();
