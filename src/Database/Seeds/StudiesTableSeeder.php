@@ -24,6 +24,14 @@ class StudiesTableSeeder extends Seeder
                 "replaces_study_id" => 1
             ]
         );
+        factory(Study::class)->create(
+            [
+                "name" => "Educació Infantil",
+                "law_id" => 1,
+                "state" => 1,
+                "replaces_study_id" => 2
+            ]
+        );
     } catch (\Illuminate\Database\QueryException $exception) {
 
 }

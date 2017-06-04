@@ -29,12 +29,17 @@ class Submodule extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'order' , 'total_hours', 'week_hours', 'start_date', 'finish_date'];
+    protected $fillable = ['name', 'order' , 'total_hours', 'week_hours', 'submodule_id', 'start_date', 'end_date'];
     /**
      * Get the type os study submodules.
      */
     public function type()
     {
         return $this->belongsTo(SubmoduleType::class);
+    }
+
+    public function module()
+    {
+        return $this->belongsTo(Module::class, 'module_id');
     }
 }

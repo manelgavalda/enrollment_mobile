@@ -18,6 +18,7 @@ class CreateClassroomsTable extends Migration
             $table->string('name');
             $table->timestamps();
             $table->integer('enrollment_id')->unsigned()->nullable();
+            $table->integer('submodule_id')->unsigned()->nullable();
         });
 
 //        Schema::create('classroom_enrollment', function (Blueprint $table) {

@@ -38,7 +38,7 @@ Route::group([
         Route::resource('classrooms', 'ClassroomsController');
         Route::resource('courses', 'CoursesController');
         Route::resource('enrollmentStudySubmodules', 'EnrollmentStudySubmodulesController');
-        Route::resource('module', 'ModulesController');
+        Route::resource('modules', 'ModulesController');
         Route::resource('cycles', 'CyclesController');
         Route::resource('submodules', 'SubmodulesController');
         Route::resource('submoduleTypes', 'SubmoduleTypesController');
@@ -48,7 +48,6 @@ Route::group([
 //            return Enrollment::all();
 //            $user = Auth::user();
             $enrollment_id = Auth::user()->enrollment_id;
-
             return Enrollment::find($enrollment_id);
         });
         Route::get('/person_from_user', function (Request $request) {
@@ -58,5 +57,6 @@ Route::group([
 
             return Person::find($user_id);
         });
+
     });
 });

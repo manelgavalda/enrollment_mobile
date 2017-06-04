@@ -29,5 +29,10 @@ class CoursesTableSeeder extends Seeder
                 "name" => "2DAM",
             ]
         );
+        factory(Course::class)->create(
+            [
+                "name" => "Educació infantil",
+            ]
+        );
     }
 }

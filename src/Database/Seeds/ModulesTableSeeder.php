@@ -64,5 +64,31 @@ class ModulesTableSeeder extends Seeder
         } catch (\Illuminate\Database\QueryException $exception) {
 
         }
+
+        try {
+            factory(Module::class)->create(
+                [
+                    "name" => "MP01 - Module 1",
+                    "order" => 1,
+                    "study_id" => 2
+                ]
+            );
+
+        } catch (\Illuminate\Database\QueryException $exception) {
+
+        }
+
+        try {
+            factory(Module::class)->create(
+                [
+                    "name" => "MP02 - Module 2",
+                    "order" => 2,
+                    "study_id" => 2
+                ]
+            );
+
+        } catch (\Illuminate\Database\QueryException $exception) {
+
+        }
     }
 }
