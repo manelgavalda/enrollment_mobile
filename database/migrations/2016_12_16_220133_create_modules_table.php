@@ -19,6 +19,7 @@ class CreateModulesTable extends Migration
         Schema::create('modules', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->boolean('selected')->nullable();
             $table->unsignedTinyInteger('order')->nullable();
             $table->integer('study_id')->unsigned();
             $table->timestamps();

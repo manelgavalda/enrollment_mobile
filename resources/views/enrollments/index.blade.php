@@ -56,8 +56,30 @@
                             @endphp
 
                                 <div class="form-group {{ $warning }}">
-                                    <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i>Name</label>
+                                    <label class="control-label" for="inputWarning"><i class="fa fa-pencil"></i> Name</label>
+                                    {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
                                     <input type="text" class="form-control" id="inputWarning" placeholder="Name" name="name" value="{{old('name')}}">
+
+                                    <label class="control-label" for="inputWarning"><i class="fa fa-check-square-o"></i> Validated</label>
+                                    {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                    <input type="text" class="form-control" id="inputWarning" placeholder="Validated" name="validated" value="{{old('validated')}}">
+
+                                    <label class="control-label" for="inputWarning"><i class="fa fa-flag-checkered"></i> Finished</label>
+                                    {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                    <input type="text" class="form-control" id="inputWarning" placeholder="Finished" name="finished" value="{{old('finished')}}">
+
+                                    <label class="control-label" for="inputWarning"><i class="fa fa-list-alt"></i> Study Id</label>
+                                    {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                    <input type="text" class="form-control" id="inputWarning" placeholder="Study Id" name="study_id" value="{{old('study_id')}}">
+
+                                    <label class="control-label" for="inputWarning"><i class="fa fa-archive"></i> Course Id</label>
+                                    {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                    <input type="text" class="form-control" id="inputWarning" placeholder="Course Id" name="course_id" value="{{old('course_id')}}">
+
+                                    <label class="control-label" for="inputWarning"><i class="fa fa-briefcase"></i> Classroom Id</label>
+                                    {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                    <input type="text" class="form-control" id="inputWarning" placeholder="Classroom Id" name="classroom_id" value="{{old('classroom_id')}}">
+
                                     @foreach ($errors->get('name') as $message)
                                         <span class="help-block"> {{ $message }}</span>
                                     @endforeach
@@ -116,10 +138,33 @@
                             @endphp
 
                             <div class="form-group">
-                                <label class="control-label" for="inputWarning"><i class="fa fa-pencil"></i>Name</label>
+                                <label class="control-label" for="inputWarning"><i class="fa fa-pencil"></i> Name</label>
                                 {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
                                 <input type="text" class="form-control" id="inputWarning" placeholder="Name" name="name" value="{{old('name')}}">
-                                @foreach ($errors->get('name') as $message)
+
+                                <label class="control-label" for="inputWarning"><i class="fa fa-check-square-o"></i> Validated</label>
+                                {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                <input type="text" class="form-control" id="inputWarning" placeholder="Validated" name="validated" value="{{old('validated')}}">
+
+                                <label class="control-label" for="inputWarning"><i class="fa fa-flag-checkered"></i> Finished</label>
+                                {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                <input type="text" class="form-control" id="inputWarning" placeholder="Finished" name="finished" value="{{old('finished')}}">
+
+                                <label class="control-label" for="inputWarning"><i class="fa fa-list-alt"></i> Study Id</label>
+                                {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                <input type="text" class="form-control" id="inputWarning" placeholder="Study Id" name="study_id" value="{{old('study_id')}}">
+
+                                <label class="control-label" for="inputWarning"><i class="fa fa-archive"></i> Course Id</label>
+                                {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                <input type="text" class="form-control" id="inputWarning" placeholder="Course Id" name="course_id" value="{{old('course_id')}}">
+
+                                <label class="control-label" for="inputWarning"><i class="fa fa-briefcase"></i> Classroom Id</label>
+                                {{--<input type="text" class="form-control" id="inputWarning" placeholder="Id" name="id" value="{{old('id')}}">--}}
+                                <input type="text" class="form-control" id="inputWarning" placeholder="Classroom Id" name="classroom_id" value="{{old('classroom_id')}}">
+
+
+
+                            @foreach ($errors->get('name') as $message)
                                     <span class="help-block"> {{ $message }}</span>
                                 @endforeach
                             </div>
@@ -149,20 +194,25 @@
                             <thead>
                             <tr>
                                 <th style="width: 10px">#</th>
+                                <th>Validated</th>
                                 <th>Name</th>
+                                <th>Finished</th>
+                                <th>Study_id</th>
+                                <th>Course_id</th>
+                                <th>Classroom_id</th>
                                 <th>Actions</th>
-                                {{--<th>Validated</th>--}}
-                                {{--<th>Finished</th>--}}
-                                {{--<th>Study_id</th>--}}
-                                {{--<th>Course_id</th>--}}
-                                {{--<th>Classroom_id</th>--}}
                             </tr>
                             </thead>
                             <tbody>
                             @foreach ($enrollments as $enrollment)
                                 <tr>
                                     <td> {{ $enrollment->id  }} </td>
+                                    <td> <input type="checkbox" name="vehicle" value="{{$enrollment->validated}}"> </td>
                                     <td> {{ $enrollment->name }} </td>
+                                    <td> {{ $enrollment->finished }} </td>
+                                    <td> {{ $enrollment->study_id }} </td>
+                                    <td> {{ $enrollment->course_id }} </td>
+                                    <td> {{ $enrollment->classroom_id }} </td>
                                     <td>
                                         <form action="/enrollments/{{$enrollment->id}}" method=POST>
                                             {{ csrf_field() }}
@@ -181,11 +231,6 @@
                                                 }
                                                 updateEnrollment({{$enrollment}})"><i class="fa fa-fw fa-edit"></i></button>
                                     </td>
-                                    {{--<td> {{ $enrollment->validated }} </td>--}}
-                                    {{--<td> {{ $enrollment->finished }} </td>--}}
-                                    {{--<td> {{ $enrollment->study_id }} </td>--}}
-                                    {{--<td> {{ $enrollment->course_id }} </td>--}}
-                                    {{--<td> {{ $enrollment->classroom_id }} </td>--}}
 
                                 </tr>
                             @endforeach

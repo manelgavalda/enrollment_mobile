@@ -17,6 +17,7 @@ class CoursesTableSeeder extends Seeder
         factory(Course::class)->create(
             [
                 "name" => "1ASIX/DAM",
+                "enrollment_id" => 1,
             ]
         );
         factory(Course::class)->create(

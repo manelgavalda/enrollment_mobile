@@ -19,6 +19,7 @@ class StudiesTableSeeder extends Seeder
         factory(Study::class)->create(
             [
                 "name" => "ASIX / DAM",
+                "enrollment_id" => 1,
                 "law_id" => 1,
                 "state" => 1,
                 "replaces_study_id" => 1

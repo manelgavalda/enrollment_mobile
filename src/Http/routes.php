@@ -54,9 +54,14 @@ Route::group([
 //            return Enrollment::all();
 //            $user = Auth::user();
             $user_id = Auth::user()->person_id;
-
             return Person::find($user_id);
         });
+        Route::post('/modules_from_course', function (Request $request) {
+//            return Enrollment::all();
+//            $user = Auth::user();
+            return Person::find($user_id);
+        });
+
 
     });
 });
