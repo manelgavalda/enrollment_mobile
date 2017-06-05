@@ -21,8 +21,8 @@ class SubmodulesTableSeeder extends Seeder
             "total_hours" => 1000,
             "week_hours" => 10,
             "module_id" => 1,
-            "start_date" => 12-31-2016,
-            "end_date" => 01-03-2017
+//            "start_date" => 12-31-2016,
+//            "end_date" => 01-03-2017
         ]);
         factory(Submodule::class)->create([
             "name" => "UF2 - Gestió de la informació i de recursos en una xarxa",
@@ -31,8 +31,8 @@ class SubmodulesTableSeeder extends Seeder
             "total_hours" => 1000,
             "week_hours" => 10,
             "module_id" => 1,
-            "start_date" => 12-31-2016,
-            "end_date" => 01-03-2017
+//            "start_date" => 12-31-2016,
+//            "end_date" => 01-03-2017
         ]);
 
         factory(Submodule::class)->create([
@@ -42,8 +42,8 @@ class SubmodulesTableSeeder extends Seeder
             "total_hours" => 1000,
             "week_hours" => 10,
             "module_id" => 1,
-            "start_date" => 12-31-2016,
-            "end_date" => 01-03-2017
+//            "start_date" => 12-31-2016,
+//            "end_date" => 01-03-2017
         ]);
 
         factory(Submodule::class)->create([
@@ -53,8 +53,8 @@ class SubmodulesTableSeeder extends Seeder
             "total_hours" => 1000,
             "week_hours" => 10,
             "module_id" => 1,
-            "start_date" => 12-31-2016,
-            "end_date" => 01-03-2017
+//            "start_date" => 12-31-2016,
+//            "end_date" => 01-03-2017
         ]);
 
         factory(Submodule::class)->create([
@@ -64,8 +64,8 @@ class SubmodulesTableSeeder extends Seeder
             "total_hours" => 1000,
             "week_hours" => 10,
             "module_id" => 4,
-            "start_date" => 12-31-2016,
-            "end_date" => 01-03-2017
+//            "start_date" => 12-31-2016,
+//            "end_date" => 01-03-2017
         ]);
 
         factory(Submodule::class)->create([
@@ -75,8 +75,8 @@ class SubmodulesTableSeeder extends Seeder
             "total_hours" => 1000,
             "week_hours" => 10,
             "module_id" => 5,
-            "start_date" => 12-31-2016,
-            "end_date" => 01-03-2017
+//            "start_date" => 12-31-2016,
+//            "end_date" => 01-03-2017
         ]);
 
         factory(Submodule::class)->create([
@@ -86,8 +86,8 @@ class SubmodulesTableSeeder extends Seeder
             "total_hours" => 1000,
             "week_hours" => 10,
             "module_id" => 6,
-            "start_date" => 12-31-2016,
-            "end_date" => 01-03-2017
+//            "start_date" => 12-31-2016,
+//            "end_date" => 01-03-2017
         ]);
 
     }
