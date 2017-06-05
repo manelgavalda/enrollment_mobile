@@ -23,7 +23,7 @@ class CreateSubmodulesTable extends Migration
             $table->unsignedTinyInteger('order')->nullable();
             $table->integer('type')->unsigned()->default(1);
             $table->integer('total_hours')->nullable();
-            $table->date('week_hours')->nullable();
+            $table->integer('week_hours')->nullable();
             $table->integer('module_id')->unsigned();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
