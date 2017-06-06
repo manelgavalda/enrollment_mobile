@@ -25,5 +25,10 @@ class Module extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'order','study_id'];
+    protected $fillable = ['name', 'order','study_id','module_id'];
+
+    public function submodules()
+    {
+        return $this->hasMany(Submodule::class);
+    }
 }

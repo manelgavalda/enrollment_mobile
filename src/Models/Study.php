@@ -27,4 +27,9 @@ class Study extends Model implements Transformable
      * @var array
      */
     protected $fillable = ['name'];
+
+    public function enrollment()
+    {
+        return $this->belongsTo(Enrollment::class, 'enrollment_id');
+    }
 }

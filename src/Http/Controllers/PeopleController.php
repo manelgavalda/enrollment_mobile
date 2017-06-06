@@ -11,7 +11,6 @@ use Scool\EnrollmentMobile\Http\Requests\PersonUpdateRequest;
 use Scool\EnrollmentMobile\Repositories\PersonRepository;
 use Scool\EnrollmentMobile\Validators\PersonValidator;
 
-
 class PeopleController extends Controller
 {
 
@@ -43,7 +42,6 @@ class PeopleController extends Controller
         $people = $this->repository->all();
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $people,
             ]);
@@ -61,9 +59,7 @@ class PeopleController extends Controller
      */
     public function store(PersonCreateRequest $request)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
             $person = $this->repository->create($request->all());
@@ -74,7 +70,6 @@ class PeopleController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
@@ -104,7 +99,6 @@ class PeopleController extends Controller
         $person = $this->repository->find($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'data' => $person,
             ]);
@@ -123,7 +117,6 @@ class PeopleController extends Controller
      */
     public function edit($id)
     {
-
         $person = $this->repository->find($id);
 
         return view('people.edit', compact('person'));
@@ -140,9 +133,7 @@ class PeopleController extends Controller
      */
     public function update(PersonUpdateRequest $request, $id)
     {
-
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
             $person = $this->repository->update($request->all(), $id);
@@ -153,15 +144,12 @@ class PeopleController extends Controller
             ];
 
             if ($request->wantsJson()) {
-
                 return response()->json($response);
             }
 
             return redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
-
             if ($request->wantsJson()) {
-
                 return response()->json([
                     'error'   => true,
                     'message' => $e->getMessageBag()
@@ -185,7 +173,6 @@ class PeopleController extends Controller
         $deleted = $this->repository->delete($id);
 
         if (request()->wantsJson()) {
-
             return response()->json([
                 'message' => 'Person deleted.',
                 'deleted' => $deleted,

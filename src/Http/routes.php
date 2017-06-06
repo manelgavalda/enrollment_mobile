@@ -38,24 +38,27 @@ Route::group([
         Route::resource('classrooms', 'ClassroomsController');
         Route::resource('courses', 'CoursesController');
         Route::resource('enrollmentStudySubmodules', 'EnrollmentStudySubmodulesController');
-        Route::resource('module', 'ModulesController');
+        Route::resource('modules', 'ModulesController');
         Route::resource('cycles', 'CyclesController');
         Route::resource('submodules', 'SubmodulesController');
         Route::resource('submoduleTypes', 'SubmoduleTypesController');
         Route::resource('dashboard', 'DashboardController');
         Route::resource('people', 'PeopleController');
         Route::get('/enrollments_from_user', function (Request $request) {
-//            return Enrollment::all();
+            //            return Enrollment::all();
 //            $user = Auth::user();
             $enrollment_id = Auth::user()->enrollment_id;
-
             return Enrollment::find($enrollment_id);
         });
         Route::get('/person_from_user', function (Request $request) {
-//            return Enrollment::all();
+            //            return Enrollment::all();
 //            $user = Auth::user();
             $user_id = Auth::user()->person_id;
-
+            return Person::find($user_id);
+        });
+        Route::post('/modules_from_course', function (Request $request) {
+            //            return Enrollment::all();
+//            $user = Auth::user();
             return Person::find($user_id);
         });
     });

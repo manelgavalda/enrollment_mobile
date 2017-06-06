@@ -40,7 +40,7 @@ class SubmodulesController extends Controller
     public function index()
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
-        $submodules = $this->repository->all();
+        $submodules = $this->repository->with('module')->all();
 
         if (request()->wantsJson()) {
             return response()->json([

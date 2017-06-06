@@ -29,7 +29,7 @@ class DashboardController extends Controller
 
         $data['labels2'] = "['January', 'February', 'March', 'April', 'May', 'June', 'July']";
         $data['values2'] = "[10, 42, 4, 23, 43, 54]";
-        return view('enrollment_mobile::dashboard.dashboard',$data);
+        return view('enrollment_mobile::dashboard.dashboard', $data);
     }
 
     /**
@@ -47,16 +47,15 @@ class DashboardController extends Controller
      */
     public function number($model)
     {
-//        $value = Cache::remember('tasksNumber',5, function () use ($model){
+        //        $value = Cache::remember('tasksNumber',5, function () use ($model){
             //Codi a executar si cache MISS
 //            return DB::table()->get();
 // $this?
             $model='\\Scool\EnrollmentMobile\Models\\'.ucfirst($model);
-            return $model::all()->count();
+        return $model::all()->count();
 //        });
 
 //        return $value;
-
     }
 
     /**
@@ -64,7 +63,7 @@ class DashboardController extends Controller
      */
     public function createRandom($model)
     {
-//        $model='\\Scool\EnrollmentMobile\Models\\'.ucfirst($model);
+        //        $model='\\Scool\EnrollmentMobile\Models\\'.ucfirst($model);
         $model='Scool\\EnrollmentMobile\\Models\\'.ucfirst($model);
         factory($model)->create();
     }

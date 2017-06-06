@@ -15,7 +15,7 @@ class CourseCreateRequest extends FormRequest
      */
     public function authorize()
     {
-      return Auth::user()->can('edit courses');
+        return Auth::user()->can('edit courses');
     }
 
     /**
@@ -32,6 +32,6 @@ class CourseCreateRequest extends FormRequest
 
     public function forbiddenResponse()
     {
-      return Response::make('Permission denied on creating courses', 403);
+        return Response::make('Permission denied on creating courses', 403);
     }
 }

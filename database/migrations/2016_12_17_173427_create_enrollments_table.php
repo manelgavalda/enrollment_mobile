@@ -16,8 +16,8 @@ class CreateEnrollmentsTable extends Migration
         Schema::create('enrollments', function (Blueprint $table) {
             $table->increments('id'); //obligatori
             $table->string('name'); //CAMP NO FORMA PART, només vull provar.
-            $table->boolean('validated'); //només les vàlides són actives.
-            $table->boolean('finished'); //indica si la matricula està finalitzada.
+            $table->boolean('validated')->nullable(); //només les vàlides són actives.
+            $table->boolean('finished')->nullable(); //indica si la matricula està finalitzada.
             //$table->integer('period_id'); //De moment descartat //obligatori
             $table->integer('user_id')->unsigned()->nullable(); //indica si la matricula està finalitzada.
             $table->integer('classroom_id')->unsigned()->nullable(); //indica si la matricula està finalitzada.
@@ -38,7 +38,6 @@ class CreateEnrollmentsTable extends Migration
 //            $table->timestamps();
 //            $table->unique(['enrollment_id', 'user_id']);
 //        });
-
     }
 
     /**

@@ -19,10 +19,12 @@ class CreateSubmodulesTable extends Migration
         Schema::create('submodules', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->boolean('selected')->nullable();
             $table->unsignedTinyInteger('order')->nullable();
             $table->integer('type')->unsigned()->default(1);
-            $table->date('total_hours')->nullable();
-            $table->date('week_hours')->nullable();
+            $table->integer('total_hours')->nullable();
+            $table->integer('week_hours')->nullable();
+            $table->integer('module_id')->unsigned();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->timestamps();

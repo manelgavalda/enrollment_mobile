@@ -19,4 +19,3 @@ trait HasManyDepartments
         return $this->hasMany(Department::class)->withTimestamps();
     }
 }
-

@@ -11,6 +11,7 @@ use Scool\EnrollmentMobile\Traits\RecordsActivity;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
+
 //use Scool\Foundation\User;
 
 /**
@@ -48,6 +49,17 @@ class Enrollment extends Model implements Transformable
     {
         return $this->hasOne("Scool\EnrollmentMobile\Models\Classroom");
     }
+
+    public function course()
+    {
+        return $this->hasOne("Scool\EnrollmentMobile\Models\Course");
+    }
+
+    public function study()
+    {
+        return $this->hasOne("Scool\EnrollmentMobile\Models\Study");
+    }
+
 
 //    /**
 //     * @return \Illuminate\Database\Eloquent\Relations\HasOne

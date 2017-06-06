@@ -19,4 +19,3 @@ trait HasManyStudies
         return $this->hasMany(Study::class)->withTimestamps();
     }
 }
-

@@ -15,4 +15,9 @@ class Course extends Model implements Transformable
 {
     use TransformableTrait, HasSubmodules;
     protected $fillable = [];
+
+    public function enrollment()
+    {
+        return $this->belongsTo(Enrollment::class, 'enrollment_id');
+    }
 }

@@ -19,4 +19,3 @@ trait HasLaw
         return $this->hasOne(Law::class)->withTimestamps();
     }
 }
-
