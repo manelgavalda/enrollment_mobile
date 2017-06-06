@@ -11,6 +11,7 @@ use Scool\EnrollmentMobile\Traits\RecordsActivity;
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
+
 //use Scool\Foundation\User;
 
 /**

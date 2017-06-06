@@ -2,7 +2,6 @@
 
 namespace Scool\EnrollmentMobile\Traits;
 
-
 /**
  * Trait RecordsActivity
  * @package Scool\EnrollmentMobile\Traits
@@ -15,7 +14,9 @@ trait RecordsActivity
     protected static function bootRecordsActivity()
     {
         // Comprovar si no hi ha usuari logat.
-        if (auth()->guest()) return;
+        if (auth()->guest()) {
+            return;
+        }
 
         foreach (static::getActivitiesToRecord() as $event) {
             static::$event(function ($model) use ($event) {

@@ -14,8 +14,8 @@ class StudiesTableSeeder extends Seeder
      */
     public function run()
     {
-//        factory(Classroom::class, 20)->create();
-    try{
+        //        factory(Classroom::class, 20)->create();
+    try {
         factory(Study::class)->create(
             [
                 "name" => "ASIX / DAM",
@@ -34,7 +34,6 @@ class StudiesTableSeeder extends Seeder
             ]
         );
     } catch (\Illuminate\Database\QueryException $exception) {
-
-}
+    }
     }
 }

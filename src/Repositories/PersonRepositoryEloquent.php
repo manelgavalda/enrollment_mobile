@@ -31,7 +31,6 @@ class PersonRepositoryEloquent extends BaseRepository implements PersonRepositor
     */
     public function validator()
     {
-
         return PersonValidator::class;
     }
 

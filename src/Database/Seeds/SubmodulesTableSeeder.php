@@ -89,6 +89,5 @@ class SubmodulesTableSeeder extends Seeder
 //            "start_date" => 12-31-2016,
 //            "end_date" => 01-03-2017
         ]);
-
     }
 }

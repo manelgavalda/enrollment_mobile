@@ -24,21 +24,21 @@ class Department extends Model
      */
     public function subdepartments()
     {
-        return $this->hasMany(Department::class,'parent');
+        return $this->hasMany(Department::class, 'parent');
     }
     /**
      * Get the parent department.
      */
     public function parent()
     {
-        return $this->belongsTo(Department::class,'parent');
+        return $this->belongsTo(Department::class, 'parent');
     }
     /**
      * The heads that belong to the department.
      */
     public function heads()
     {
-        return $this->belongsToMany(User::class,'department_head', 'department_id','user_id')
+        return $this->belongsToMany(User::class, 'department_head', 'department_id', 'user_id')
             ->withPivot('main');
     }
     /**
@@ -59,7 +59,7 @@ class Department extends Model
         foreach ($this->heads as $head) {
             $this->heads()->updateExistingPivot($head->id, ['main' => false]);
         }
-        if ( ! $this->heads->contains($user) ) {
+        if (! $this->heads->contains($user)) {
             $this->heads()->save($user, ['main' => true]);
         } else {
             $this->heads()->updateExistingPivot($user->id, ['main' => true]);
