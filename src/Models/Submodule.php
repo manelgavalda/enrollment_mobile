@@ -23,7 +23,7 @@ use Scool\EnrollmentMobile\Traits\HasSpecialities;
  */
 class Submodule extends Model
 {
-        use HasSpecialities, HasModules, HasClassrooms, HasCourses, HasManyStudies,Nameable;
+    use HasSpecialities, HasModules, HasClassrooms, HasCourses, HasManyStudies,Nameable;
     /**
      * The attributes that are mass assignable.
      *

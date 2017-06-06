@@ -38,7 +38,6 @@ class CreateEnrollmentsTable extends Migration
 //            $table->timestamps();
 //            $table->unique(['enrollment_id', 'user_id']);
 //        });
-
     }
 
     /**

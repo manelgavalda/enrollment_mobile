@@ -19,4 +19,3 @@ trait HasStudy
         return $this->belongsTo(Study::class)->withTimestamps();
     }
 }
-

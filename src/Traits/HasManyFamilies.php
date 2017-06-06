@@ -19,4 +19,3 @@ trait HasManyFamilies
         return $this->hasMany(Family::class)->withTimestamps();
     }
 }
-

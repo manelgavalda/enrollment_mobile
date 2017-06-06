@@ -23,7 +23,8 @@ trait HasModules
      *
      * @param Module $module
      */
-    public function addModule($module){
+    public function addModule($module)
+    {
         $this->modules()->save($module);
     }
 
@@ -32,8 +33,8 @@ trait HasModules
      *
      * @param Module $module
      */
-    public function addModuleById($module){
+    public function addModuleById($module)
+    {
         $this->modules()->save(Module::findOrFail($module));
     }
-
 }

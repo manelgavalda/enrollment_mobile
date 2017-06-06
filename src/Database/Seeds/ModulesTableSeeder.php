@@ -24,7 +24,6 @@ class ModulesTableSeeder extends Seeder
                 ]
             );
         } catch (\Illuminate\Database\QueryException $exception) {
-
         }
         try {
             factory(Module::class)->create(
@@ -34,9 +33,7 @@ class ModulesTableSeeder extends Seeder
                     "study_id" => 1
                 ]
             );
-
         } catch (\Illuminate\Database\QueryException $exception) {
-
         }
 
         try {
@@ -47,9 +44,7 @@ class ModulesTableSeeder extends Seeder
                     "study_id" => 1
                 ]
             );
-
         } catch (\Illuminate\Database\QueryException $exception) {
-
         }
 
         try {
@@ -60,9 +55,7 @@ class ModulesTableSeeder extends Seeder
                     "study_id" => 1
                 ]
             );
-
         } catch (\Illuminate\Database\QueryException $exception) {
-
         }
 
         try {
@@ -73,9 +66,7 @@ class ModulesTableSeeder extends Seeder
                     "study_id" => 2
                 ]
             );
-
         } catch (\Illuminate\Database\QueryException $exception) {
-
         }
 
         try {
@@ -86,9 +77,7 @@ class ModulesTableSeeder extends Seeder
                     "study_id" => 2
                 ]
             );
-
         } catch (\Illuminate\Database\QueryException $exception) {
-
         }
     }
 }

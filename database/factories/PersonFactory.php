@@ -22,4 +22,3 @@ $factory->define(Scool\EnrollmentMobile\Models\Person::class, function (Faker\Ge
         'user_id' => 1
     ];
 });
-

@@ -19,4 +19,3 @@ trait HasCycle
         return $this->hasOne(Cycle::class)->withTimestamps();
     }
 }
-
