@@ -9,6 +9,11 @@
 
 Projecte mòdul enrollment_mobile
 
+- [Offical Web Page][link-landing-page]
+- [Google Play Application][link-google-play]
+- [Online Presentation][link-presentation]
+
+
 ## Install
 
 Via Composer:
@@ -106,4 +111,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-code-quality]: https://scrutinizer-ci.com/g/scool/enrollment_mobile
 [link-downloads]: https://packagist.org/packages/scool/enrollment_mobile
 [link-author]: https://github.com/manelgavalda
+[link-landing-page]: https://manelgavalda.github.io/LandingPage/
 [link-contributors]: ../../contributors
+[link-google-play]: http://play.google.com/
+[link-presentation]: https://manelgavalda.github.io/enrollment_mobile_presentation/#/
