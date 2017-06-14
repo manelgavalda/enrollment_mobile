@@ -35,6 +35,7 @@
                         {{--</div>--}}
 
                         <form role="form" action="/modules" method="post" id="createModule">
+                            <input type="hidden" name="study_id" value="1">
                             <!-- text input -->
                             {{ csrf_field() }}
 

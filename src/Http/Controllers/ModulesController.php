@@ -58,7 +58,8 @@ class ModulesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store(ModuleCreateRequest $request)
+//    public function store(ModuleCreateRequest $request)
+    public function store(Request $request)
     {
         try {
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
@@ -132,7 +133,8 @@ class ModulesController extends Controller
      *
      * @return Response
      */
-    public function update(ModuleUpdateRequest $request, $id)
+//    public function update(ModuleUpdateRequest $request, $id)
+    public function update(Request $request, $id)
     {
         try {
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);

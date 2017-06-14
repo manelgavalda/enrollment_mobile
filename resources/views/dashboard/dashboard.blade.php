@@ -1,8 +1,13 @@
 @extends('adminlte::page')
 
 @section('htmlheader_title')
-    Change Title here!
+    Dashboard
 @endsection
+
+@section('contentheader_title')
+    Dashboard
+@endsection
+
 
 
 @section('main-content')
