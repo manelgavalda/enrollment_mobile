@@ -20,15 +20,42 @@ use Prettus\Repository\Traits\TransformableTrait;
  */
 class Enrollment extends Model implements Transformable
 {
-    //afegim model stateful per als models que volem qeu tinguin estat, com en el name per als noms. Afegir columna state ala migracio de l'objecte(i ens dira com esta l'objecte de la taula(open,closed,etc), es configurable. state amb nullabel si pot ser que no es guarde
-    use TransformableTrait,Nameable, RecordsActivity;//StatefulTrait;
+    use TransformableTrait,Nameable, RecordsActivity; // StatefulTrait;
 
-    //public $timestamps = false;
-    //all camps
+
     protected $fillable = ['id','name','validated','finished', 'user_id', 'study_id','course_id','classroom_id'];
-    //TODO: mirar estats (enrollment). Implementar i definir estats(exemple porta(esborrany,valida,feta).
-    //TODO: Necessari vàlid i no.
-    //TODO: Afegir rutes minim a un Model.
+
+    protected $states = [
+        'User' => ['initial' => true],
+        'Enrollments',
+        'Study',
+        'Module',
+        'Active',
+        'Submodule' => ['final' => true]
+    ];
+
+    protected $transitions = [
+        'create' => [
+            'from' => 'User',
+            'to' => 'Enrollments'
+        ],
+        'chose_enrollment' => [
+            'from' => 'Enrollments',
+            'to' => 'Study'
+        ],
+        'chose_module' => [
+            'from' => 'Study',
+            'to' => 'Module'
+        ],
+        'chose_submodules' => [
+            'from' => 'Module',
+            'to' => 'Submodule'
+        ],
+        'enrollment_status' => [
+            'from' => 'Submodule',
+            'to' => 'Active'
+        ]
+    ];
 
     protected $events = [
         'created' => EnrollmentCreated::class
