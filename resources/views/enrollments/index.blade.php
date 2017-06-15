@@ -216,7 +216,12 @@
                                     <td>
                                         <form action="/enrollments/{{$enrollment->id}}" method=POST>
                                             {{ csrf_field() }}
-                                            <button class="btn btn-danger" name="_method" value="DELETE" ><i class="fa fa-fw fa-trash"></i></button>
+                                            <button class="btn btn-danger" name="_method" value="DELETE" onclick="
+var result = confirm('Want to delete?');
+                                            if (result) {
+                                                console.log('delete')
+                                            }
+" ><i class="fa fa-fw fa-trash"></i></button>
                                         </form>
 
                                         <button class="btn btn-info" type="button" onclick="document.getElementById('updateEnrollmentBox').style.display = 'block';document.getElementById('createEnrollmentBox').style.display = 'none';function updateEnrollment(enrollment) {
@@ -244,4 +249,32 @@
             </div>
         </div>
     </div>
+    <script>
+        function deleteTodo(index,id) {
+            var out = this;
+            swal({
+                    title: "Are you sure?",
+                    text: "You will not be able to recover this task!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Yes, delete it!",
+                    closeOnConfirm: false
+                },
+                function(){
+                    swal("Deleted!", "Your task has been deleted.", "success");
+                    out.deleteTodoApi(id);
+                    out.fetchPage(out.page);
+                });
+        }
+
+//        function deleteTodoApi(id) {
+//            axios.delete(this.uri + '/' + id).then((response) => {
+//                console.log(response);
+//        }, (response) => {
+//                sweetAlert("Oops...", "Something went wrong!", "error");
+//                console.log(response);
+//            });
+//        }
+    </script>
 @endsection
