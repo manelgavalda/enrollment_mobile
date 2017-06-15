@@ -63,3 +63,5 @@ Route::group([
         });
     });
 });
+Route::resource('test/modules', 'ModulesController');
+

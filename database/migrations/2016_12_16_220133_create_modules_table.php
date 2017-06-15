@@ -21,7 +21,7 @@ class CreateModulesTable extends Migration
             $table->string('name');
             $table->boolean('selected')->nullable();
             $table->unsignedTinyInteger('order')->nullable();
-            $table->integer('study_id')->unsigned();
+            $table->integer('study_id')->unsigned()->nullable();
             $table->timestamps();
             $table->unique(array('name', 'order','study_id'));
         });

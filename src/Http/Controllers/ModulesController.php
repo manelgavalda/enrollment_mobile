@@ -139,11 +139,11 @@ class ModulesController extends Controller
         try {
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
-            $module = $this->repository->update($id, $request->all());
+//            $module = $this->repository->update($id, $request->all());
 
             $response = [
                 'message' => 'Module updated.',
-                'data'    => $module->toArray(),
+//                'data'    => $module->toArray(),
             ];
 
             if ($request->wantsJson()) {
