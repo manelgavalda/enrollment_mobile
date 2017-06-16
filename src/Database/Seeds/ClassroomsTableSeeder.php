@@ -18,5 +18,9 @@ class ClassroomsTableSeeder extends Seeder
             "name" => "1ASIX-DAM. 1r Informàtica (S) ASIX - DAM",
             "enrollment_id" => 1
         ]);
+        factory(Classroom::class)->create([
+            "name" => "2DAM. 2on DAM",
+            "enrollment_id" => 2
+        ]);
     }
 }

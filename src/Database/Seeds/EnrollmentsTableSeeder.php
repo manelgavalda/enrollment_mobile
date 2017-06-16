@@ -23,6 +23,16 @@ class EnrollmentsTableSeeder extends Seeder
             "study_id" => 1,
             "course_id" => 1
         ]);
+
+        factory(Enrollment::class)->create([
+            "name" => "2 Enrollment",
+            "validated" => null,
+            "finished" => false,
+            "user_id" => 1,
+            "classroom_id" => 2,
+            "study_id" => 2,
+            "course_id" => 2
+        ]);
 //        $table->boolean('validated'); //només les vàlides són actives.
 //        $table->boolean('finished'); //indica si la matricula està finalitzada.
 //        //$table->integer('period_id'); //De moment descartat //obligatori

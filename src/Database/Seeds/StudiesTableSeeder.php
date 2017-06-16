@@ -28,6 +28,7 @@ class StudiesTableSeeder extends Seeder
         factory(Study::class)->create(
             [
                 "name" => "Educació Infantil",
+                "enrollment_id" => 2,
                 "law_id" => 1,
                 "state" => 1,
                 "replaces_study_id" => 2
