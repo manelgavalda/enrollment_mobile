@@ -207,7 +207,11 @@
                             @foreach ($enrollments as $enrollment)
                                 <tr>
                                     <td> {{ $enrollment->id  }} </td>
-                                    <td> <input type="checkbox" name="vehicle" value="{{$enrollment->validated}}"> </td>
+                                    @if($enrollment->validated == 1)
+                                        <td> <input class="validated" type="checkbox" name="validated" value="1" checked> </td>
+                                    @else
+                                        <td> <input class="validated" type="checkbox" name="validated" value="0"> </td>
+                                    @endif
                                     <td> {{ $enrollment->name }} </td>
                                     <td> {{ $enrollment->finished }} </td>
                                     <td> {{ $enrollment->study_id }} </td>
@@ -250,31 +254,5 @@ var result = confirm('Want to delete?');
         </div>
     </div>
     <script>
-        function deleteTodo(index,id) {
-            var out = this;
-            swal({
-                    title: "Are you sure?",
-                    text: "You will not be able to recover this task!",
-                    type: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: "#DD6B55",
-                    confirmButtonText: "Yes, delete it!",
-                    closeOnConfirm: false
-                },
-                function(){
-                    swal("Deleted!", "Your task has been deleted.", "success");
-                    out.deleteTodoApi(id);
-                    out.fetchPage(out.page);
-                });
-        }
-
-//        function deleteTodoApi(id) {
-//            axios.delete(this.uri + '/' + id).then((response) => {
-//                console.log(response);
-//        }, (response) => {
-//                sweetAlert("Oops...", "Something went wrong!", "error");
-//                console.log(response);
-//            });
-//        }
     </script>
 @endsection
