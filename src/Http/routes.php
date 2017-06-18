@@ -64,6 +64,5 @@ Route::group([
 
     });
 });
-Route::post('api/v1/user/gcmtoken', 'GcmTokensController@addToken');
 Route::resource('test/modules', 'ModulesController');
 
