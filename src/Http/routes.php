@@ -61,6 +61,8 @@ Route::group([
 //            $user = Auth::user();
             return Person::find($user_id);
         });
+
+        Route::post('/user/gcmtoken', 'GcmTokensController@addToken');
     });
 });
 Route::resource('test/modules', 'ModulesController');
